@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -22,8 +22,17 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('js/fontawesome.min.js') }}"></script>
+    <script src="{{ asset('js/chart.min.js') }} "></script>
+
+    <script src="{{ asset('js/script.js') }}"></script>
+    
+
 </head>
 <body>
+
+
     <div id="app">
         <div class="wrapper">
 
@@ -52,16 +61,23 @@
                     </li>
 
                     <li>
-                        <a href="#subDepartments" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle py-3">
+                        <a href="#subSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle py-3">
                             <i class="fas fa-building fa-lg ml-3 mr-4"></i>
-                            <span class="sidebar-link">Departments</span>
+                            <span class="sidebar-link">Sections</span>
                         </a>
-                        <ul class="collapse list-unstyled" id="subDepartments">
-                            <li><a href="#">CCS</a></li>
-                            <li><a href="#">CBA</a></li>
-                            <li><a href="#">CCE</a></li>
-                            <li><a href="#">CCS</a></li>
-                            <li><a href="#">CCS</a></li>
+                        <ul class="collapse list-unstyled" id="subSections">
+                            <li>
+                                <a href="#">Section A</a>
+                            </li>
+                            <li>
+                                <a href="#">Section B</a>
+                            </li>
+                            <li>
+                                <a href="#">Section C</a>
+                            </li>
+                            <li>
+                                <a href="#">Section D</a>
+                            </li>
                         </ul>
                     </li>
 
@@ -71,10 +87,18 @@
                             <span class="sidebar-link">Statistics</span>
                         </a>
                         <ul class="collapse list-unstyled" id="subStatistics">
-                            <li><a href="#">Daily</a></li>
-                            <li><a href="#">Weekly</a></li>
-                            <li><a href="#">Monthly</a></li>
-                            <li><a href="#">Yearly</a></li>
+                            <li>
+                                <a href="#">Daily</a>
+                            </li>
+                            <li>
+                                <a href="#">Weekly</a>
+                            </li>
+                            <li>
+                                <a href="#">Monthly</a>
+                            </li>
+                            <li>
+                                <a href="#">Yearly</a>
+                            </li>
                         </ul>
                     </li>
 
@@ -96,26 +120,14 @@
                             <span class="sidebar-link">Student</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="py-3">
-                            <i class="fas fa-outdent fa-lg ml-3 mr-4"></i>
-                            <span class="sidebar-link">Services</span>
 
-                        </a>
-                    </li>
                     <li>
                         <a href="#" class="py-3">
                             <i class="fas fa-user fa-lg ml-3 mr-4"></i>
-                            <span class="sidebar-link">Contact</span>
+                            <span class="sidebar-link">Counter</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="py-3">
-                            <i class="fas fa-info-circle fa-lg ml-3 mr-4"></i>
-                            <span class="sidebar-link">About</span>
 
-                        </a>
-                    </li>
                     <li>
                         <a href="/logout" class="py-3" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
@@ -132,7 +144,7 @@
  
 
 
-            <main id="content" class="container py-4">
+            <main id="content" class="main-content">
                 <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                     {{-- <div class="container-fluid"> --}}
                         @if(Auth::check())
@@ -191,40 +203,24 @@
                 </nav>
                 @yield('content')
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque asperiores dolores veritatis
-                    ipsam laudantium accusamus eveniet, reprehenderit repellat minima sit, dicta fuga quisquam, harum dolor alias accusantium natus perspiciatis
-                    quam quidem qui quasi animi! Ipsum recusandae optio fuga quaerat praesentium rerum soluta, expedita debitis culpa aspernatur esse itaque fugit
-                    earum veniam pariatur suscipit velit ipsa deleniti eaque harum nostrum reprehenderit sed. Modi possimus, nobis quam architecto quasi itaque
-                    eaque atque non laudantium illum expedita aut voluptate commodi quo nesciunt ad, dignissimos deserunt aliquid. Iusto commodi expedita sit reiciendis
-                    laboriosam fugiat saepe perspiciatis nesciunt exercitationem, magni doloribus delectus quibusdam perferendis aperiam?
-                </p>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque asperiores dolores veritatis
-                    ipsam laudantium accusamus eveniet, reprehenderit repellat minima sit, dicta fuga quisquam, harum dolor alias accusantium natus perspiciatis
-                    quam quidem qui quasi animi! Ipsum recusandae optio fuga quaerat praesentium rerum soluta, expedita debitis culpa aspernatur esse itaque fugit
-                    earum veniam pariatur suscipit velit ipsa deleniti eaque harum nostrum reprehenderit sed. Modi possimus, nobis quam architecto quasi itaque
-                    eaque atque non laudantium illum expedita aut voluptate commodi quo nesciunt ad, dignissimos deserunt aliquid. Iusto commodi expedita sit reiciendis
-                    laboriosam fugiat saepe perspiciatis nesciunt exercitationem, magni doloribus delectus quibusdam perferendis aperiam?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque asperiores dolores veritatis
-                    ipsam laudantium accusamus eveniet, reprehenderit repellat minima sit, dicta fuga quisquam, harum dolor alias accusantium natus perspiciatis
-                    quam quidem qui quasi animi! Ipsum recusandae optio fuga quaerat praesentium rerum soluta, expedita debitis culpa aspernatur esse itaque fugit
-                    earum veniam pariatur suscipit velit ipsa deleniti eaque harum nostrum reprehenderit sed. Modi possimus, nobis quam architecto quasi itaque
-                    eaque atque non laudantium illum expedita aut voluptate commodi quo nesciunt ad, dignissimos deserunt aliquid. Iusto commodi expedita sit reiciendis
-                    laboriosam fugiat saepe perspiciatis nesciunt exercitationem, magni doloribus delectus quibusdam perferendis aperiam?
-                </p>
+
+
+
+                <footer id="footer">
+                    <p>Copyright 2020</p>
+                </footer>
+
             </main>
+
+            
 
             <div class="overlay" onclick="toggleSidebar()"></div>
         </div>
     </div>
 
     {{-- Font Awesome --}}
-    <script src="{{ asset('js/script.js') }}"></script>
-    <script src="{{ asset('js/fontawesome.min.js') }}"></script>
+    
 
 </body>
 </html>
