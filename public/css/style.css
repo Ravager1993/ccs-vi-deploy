@@ -351,6 +351,9 @@ a.user-drop[aria-expanded="true"] {
     background-color: orangered;
 }
 
+.bg-teal {
+    background-color: cadetblue;
+}
 .info-box {
     border-radius: 2px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
@@ -391,6 +394,22 @@ a.user-drop[aria-expanded="true"] {
 
 
 
+
+
+
+
+.body.trend {
+    border-radius: 2px;
+    color: white;
+    padding: 16px 16px 0 16px;
+    box-shadow: 0 0 8px rgba(138, 129, 129, 0.2);
+    /* margin-bottom: 24px; */
+}
+
+.student-total {
+    /* text-align: right; */
+    text-indent: 32px;
+}
 
 
 
