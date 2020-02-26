@@ -164,6 +164,148 @@
         </div>
     </div>
 
+
+    <div class="row clearfix py-4">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="card mb-4">
+                <div class="body trend bg-pink">
+                    <div class="today date">
+                        <div class="grade-level">
+                            <h6>Total number of students visited library</h6>
+                            <hr>
+                            <h6>Today</h6>
+                        </div>
+                        <div class="student-total number">
+                            <ul>
+                                <li>34</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="yesterday date">
+                        <div class="grade-level">
+                            <h6>Yesterday</h6>
+                        </div>
+                        <div class="student-total number">
+                            <ul>
+                                <li>85</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="last-week date">
+                        <div class="grade-level">
+                            <h6>Last Week</h6>
+                        </div>
+                        <div class="student-total number">
+                            <ul>
+                                <li>453</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="card mb-4 ">
+                <div class="body trend bg-cyan">
+                    <div class="today date">
+                        <div class="grade-level">
+                            <h6>Grade level that has most visited</h6>
+                            <hr>
+                            <h6>Today</h6>
+                        </div>
+                        <div class="student-total number">
+                            <ul>
+                                <li>Grade 4</li>
+                                <li>Grade 3</li>
+                                <li>Grade 6</li>
+                                <li>Grade 2</li>
+                                <li>Grade 1</li>
+                                <li>Grade 5</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="yesterday date">
+                        <div class="grade-level">
+                            <h6>Yesterday</h6>
+                        </div>
+                        <div class="student-total number">
+                            <ul>
+                                <li>Grade 1</li>
+                                <li>Grade 2</li>
+                                <li>Grade 3</li>
+                                <li>Grade 4</li>
+                                <li>Grade 5</li>
+                                <li>Grade 6</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="last-week date">
+                        <div class="grade-level">
+                            <h6>Last Week</h6>
+                        </div>
+                        <div class="student-total number">
+                            <ul>
+                                <li>Grade 4</li>
+                                <li>Grade 2</li>
+                                <li>Grade 5</li>
+                                <li>Grade 1</li>
+                                <li>Grade 6</li>
+                                <li>Grade 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="card mb-4">
+                <div class="body trend bg-teal">
+                    <div class="today date">
+                        <div class="grade-level">
+                            <h6>Sections the visited the library the most</h6>
+                            <hr>
+                            <h6>Today</h6>
+                        </div>
+                        <div class="student-total number">
+                            <ul>
+                                <li>Section D</li>
+                                <li>Section C</li>
+                                <li>Section B</li>
+                                <li>Section A</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="yesterday date">
+                        <div class="grade-level">
+                            <h6>Yesterday</h6>
+                        </div>
+                        <div class="student-total number">
+                            <ul>
+                                <li>Section A</li>
+                                <li>Section B</li>
+                                <li>Section D</li>
+                                <li>Section C</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="last-week date">
+                        <div class="grade-level">
+                            <h6>Last Week</h6>
+                        </div>
+                        <div class="student-total number">
+                            <ul>
+                                <li>Section B</li>
+                                <li>Section A</li>
+                                <li>Section D</li>
+                                <li>Section C</li>
+                            </ul>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 

@@ -27,6 +27,18 @@
     <script src="{{ asset('js/chart.min.js') }} "></script>
 
     <script src="{{ asset('js/script.js') }}"></script>
+
+
+    @if(Auth::check() == 0)
+        <style>
+            @media (min-width: 992px) {
+                #content {
+                padding-left: 0;
+
+                }
+            }
+        </style>
+    @endif
     
 
 </head>
