@@ -413,6 +413,62 @@ a.user-drop[aria-expanded="true"] {
 
 
 
+
+
+
+
+/* Login */
+.main-page .card-header {
+    font-size: 16px;
+    font-weight: bold;
+}
+.main-page.container, .register-page.container {
+    min-height: calc(100vh - 400px);
+}
+.main-page .card, .main-page .card-header {
+    border: none;
+    background-color: white;
+}
+.main-page .card {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-page input {
+    border: 0;
+    background-color: none;
+    border-radius: 0;
+    border-bottom: 2px solid gray;
+    /* border-color: #D9001F; */
+    /* outline-width: 0; */
+    outline: none !important;
+}
+.main-page input:focus {
+    outline: red;
+
+}
+
+.main-page label {
+    /* position: absolute; */
+    font-size: 12px;
+}
+
+.main-page .btn[type="submit"] {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #footer {
     margin-top: 24px;
     background-color: #eee;
