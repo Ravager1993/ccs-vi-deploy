@@ -128,10 +128,10 @@
 
     <div class="row clearfix">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="card history-chart">
+            <div class="card history-chart py-4">
                 <div class="container-fluid header">
                     <div class="row clearfix">
-                        <div class="col-xs-12 col-sm-6 mt-4">
+                        <div class="col-xs-12 col-sm-6">
                             <h4>History</h4>
                         </div>
                         {{-- <div class="col-xs-12 col-sm-6 align-right">

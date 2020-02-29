@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/student', 'StudentController@index');
 
 Route::post('/studentSubmit', 'StudentController@submit');
+
+Route::get('/counter', 'CounterController@index');

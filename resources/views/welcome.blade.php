@@ -96,6 +96,7 @@
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                     <a href="/student">Student</a>
+                    <a href="/counter">Counter</a>
                 </div>
             </div>
         </div>

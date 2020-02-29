@@ -134,7 +134,7 @@
                     </li>
 
                     <li>
-                        <a href="#" class="py-3">
+                        <a href="/counter" class="py-3">
                             <i class="fas fa-user fa-lg ml-3 mr-4"></i>
                             <span class="sidebar-link">Counter</span>
                         </a>
