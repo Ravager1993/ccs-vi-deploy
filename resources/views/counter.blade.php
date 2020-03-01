@@ -3,13 +3,13 @@
 @section('content')
 <div class="container counter-page">
     <h2>Counter</h2>
-
-    <div class="row">
-        <div class="col-md-5">
-            <form action="#" method="get">
+    <form action="/submitCounter" method="post">
+        @csrf
+        <div class="row">
+             <div class="col-md-5">
                 <label for="grade1" class="mb-4 grade-1 btn-grade w-100">
                     <div class="some">
-                        <input type="radio" name="radio-grade" id="grade1" onclick="getSections(1);">
+                        <input type="radio" name="radioGrade" id="grade1" onclick="getSections(1);" value="1">
                         <i class="icon-grade"></i>
                         <div class="label p-4">Grade 1</div>
                     </div>
@@ -17,7 +17,7 @@
 
                 <label for="grade2" class="mb-4 grade-2 btn-grade w-100">
                     <div class="some">
-                        <input type="radio" name="radio-grade" id="grade2" onclick="getSections(2);">
+                        <input type="radio" name="radioGrade" id="grade2" onclick="getSections(2);" value="2">
                         <i class="icon-grade"></i>
                         <div class="label p-4">Grade 2</div>
                     </div>
@@ -25,28 +25,28 @@
 
                 <label for="grade3" class="mb-4 grade-3 btn-grade w-100">
                     <div class="some">
-                        <input type="radio" name="radio-grade" id="grade3" onclick="getSections(3);">
+                        <input type="radio" name="radioGrade" id="grade3" onclick="getSections(3);" value="3">
                         <i class="icon-grade"></i>
                         <div class="label p-4">Grade 3</div>
                     </div>
                 </label>
                 <label for="grade4" class="mb-4 grade-4 btn-grade w-100">
                     <div class="some">
-                        <input type="radio" name="radio-grade" id="grade4" onclick="getSections(4);">
+                        <input type="radio" name="radioGrade" id="grade4" onclick="getSections(4);" value="4">
                         <i class="icon-grade"></i>
                         <div class="label p-4">Grade 4</div>
                     </div>
                 </label>
                 <label for="grade5" class="mb-4 grade-5 btn-grade w-100">
                     <div class="some">
-                        <input type="radio" name="radio-grade" id="grade5" onclick="getSections(5);">
+                        <input type="radio" name="radioGrade" id="grade5" onclick="getSections(5);" value="5">
                         <i class="icon-grade"></i>
                         <div class="label p-4">Grade 5</div>
                     </div>
                 </label>
                 <label for="grade6" class="mb-4 grade-6 btn-grade w-100">
                     <div class="some">
-                        <input type="radio" name="radio-grade" id="grade6" onclick="getSections(6);">
+                        <input type="radio" name="radioGrade" id="grade6" onclick="getSections(6);" value="6">
                         <i class="icon-grade"></i>
                         <div class="label p-4">Grade 6</div>
                     </div>
@@ -76,25 +76,25 @@
                 <label for="grade6">Grade 6</label>
                 <input type="radio" name="radio-grade" id="grade6">
             </div> --}}
-        </form>
         </div>
-
+        
         <div class="col-md-7">
             <div class="container">
                 <div class="row">
-                    <select name="" id="selectSection" class="mb-4 p-4 w-100">
-                        <option value="Section A">Select Section</option>
+                    <select name="selectSection" id="selectSection" class="mb-4 p-4 w-100">
+                        <option value="A">Select Section</option>
                     </select>
                 </div>
-                <div class="row">
-                    <input type="submit" value="Submit" class="p-4 w-100 btn btn-success">
+                <div class="row w-100 text-center">
+                    <input type="submit" value="Submit" class="mx-auto py-4 btn btn-success">
 
                 </div>
             </div>
 
         </div>
-        
-    </div>
+        </div>
+       
+    </form>
 </div>
 
 <script>
