@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
-
+use App\Counter;
 class CounterController extends Controller
 {
     public function index() {
-        return view('counter');
+        $teachers = Counter::all()->toArray();
+        return view('counter', compact('teachers'));
+
+        // return view('counter');
     }
 }
