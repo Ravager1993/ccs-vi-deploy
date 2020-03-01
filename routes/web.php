@@ -24,3 +24,5 @@ Route::get('/student', 'StudentController@index');
 Route::post('/studentSubmit', 'StudentController@submit');
 
 Route::get('/counter', 'CounterController@index');
+
+Route::get('/maintenance', 'MaintenanceController@index');
