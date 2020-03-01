@@ -232,5 +232,3 @@ window.onload = function () {
 
 
 
-
-// counter script
