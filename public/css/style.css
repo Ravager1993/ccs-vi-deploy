@@ -533,7 +533,7 @@ a.user-drop[aria-expanded="true"] {
     background-color: #9911AA;
 }
 .counter-page .grade-6 {
-    background-color: #7ea710;
+    background-color: #82a818;
 }
 
 /* colors */
@@ -562,6 +562,9 @@ a.user-drop[aria-expanded="true"] {
     border: none;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
+}
+.counter-page input[type="submit"] {
+    padding: 0 100px;
 }
 
 .counter-page input[type="submit"] {
