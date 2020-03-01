@@ -230,5 +230,17 @@ window.onload = function () {
 //Use JQUeryUI to resize the div with IE 11
 // $(".isResizable").resizable();
 
+//counter
 
+function checkValid(g){
+    if(g==0 || document.getElementById("grade"+g).checked==true)
+        document.getElementById("selectSection").disabled=false;
+    else
+        document.getElementById("selectSection").disabled = true;
+
+    if (document.getElementById("selectSection").value != "Select Section")
+        document.getElementById("submitEntry").disabled = false;
+    else
+        document.getElementById("submitEntry").disabled = true;
+}
 

@@ -20,7 +20,7 @@ class CounterController extends Controller
         $counter->grade_level = $req->radioGrade;
         $counter->section = $req->selectSection;
         $counter->save();
-        return redirect('counter');
+        return redirect('counter')->with('status', 'Success! you may now enter');
 
     }
 }
