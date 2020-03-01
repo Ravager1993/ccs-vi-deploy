@@ -8,7 +8,7 @@ class CounterController extends Controller
 {
     public function index() {
         $teachers = Counter::all()->toArray();
-        return view('counter', compact('teacher'));
+        return view('counter', compact('teachers'));
 
         // return view('counter');
     }

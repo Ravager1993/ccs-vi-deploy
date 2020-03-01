@@ -229,3 +229,8 @@ window.onload = function () {
 
 //Use JQUeryUI to resize the div with IE 11
 // $(".isResizable").resizable();
+
+
+
+
+// counter script

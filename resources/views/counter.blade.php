@@ -9,7 +9,7 @@
             <form action="#" method="get">
                 <label for="grade1" class="mb-4 grade-1 btn-grade w-100">
                     <div class="some">
-                        <input type="radio" name="radio-grade" id="grade1">
+                        <input type="radio" name="radio-grade" id="grade1" onclick="getSections(1);">
                         <i class="icon-grade"></i>
                         <div class="label p-4">Grade 1</div>
                     </div>
@@ -84,13 +84,6 @@
                 <div class="row">
                     <select name="" id="selectSection" class="mb-4 p-4 w-100">
                         <option value="Section A">Select Section</option>
-                        @foreach ($teachers as $teacher)
-                            <option value="Section A">$teacher->section</option>
-                        @endforeach
-                        <option value="Section A">Section A</option>
-                        <option value="Section A">Section B</option>
-                        <option value="Section A">Section C</option>
-                        <option value="Section A">Section D</option>
                     </select>
                 </div>
                 <div class="row">
@@ -103,4 +96,15 @@
         
     </div>
 </div>
+
+<script>
+    function getSections(g){
+        document.getElementById("selectSection").innerHTML="<option value='Section A'>Select Section</option>"+
+                        "@foreach ($teachers as $teacher)"+
+                            "@if({{ $teacher['section'] }}==1)"+
+                                "<option value='Section A'>{{ $teacher['section'] }}</option>"+
+                            "@endif"+
+                        "@endforeach";
+    }
+</script>
 @endsection
