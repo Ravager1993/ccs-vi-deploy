@@ -91,7 +91,9 @@
                     </select>
                 </div>
                 <div class="row">
-                    <input type="submit" value="Submit" class="p-4 w-100 btn btn-success">
+                    <div class="w-100 text-center">
+                        <input type="submit" value="Submit" class="py-4 btn btn-success">
+                    </div>
 
                 </div>
             </div>
