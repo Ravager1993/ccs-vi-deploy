@@ -100,50 +100,50 @@
 <script>
     function getSections(g){
         if(g==1){
-            document.getElementById("selectSection").innerHTML="<option value='Section A'>Select Section</option>"+
+            document.getElementById("selectSection").innerHTML="<option>Select Section</option>"+
                             "@foreach ($teachers as $teacher)"+
                                 "@if($teacher['grade_level']==1)"+
-                                    "<option value='Section A'>{{ $teacher['section'] }}</option>"+
+                                    "<option value='{{ $teacher['section'] }}'>{{ $teacher['section'] }}</option>"+
                                 "@endif"+
                             "@endforeach";
         }
         else if(g==2){
-            document.getElementById("selectSection").innerHTML="<option value='Section A'>Select Section</option>"+
+            document.getElementById("selectSection").innerHTML="<option>Select Section</option>"+
                             "@foreach ($teachers as $teacher)"+
                                 "@if($teacher['grade_level']==2)"+
-                                    "<option value='Section A'>{{ $teacher['section'] }}</option>"+
+                                    "<option value='{{ $teacher['section'] }}'>{{ $teacher['section'] }}</option>"+
                                 "@endif"+
                             "@endforeach";
         }
         else if(g==3){
-            document.getElementById("selectSection").innerHTML="<option value='Section A'>Select Section</option>"+
+            document.getElementById("selectSection").innerHTML="<option>Select Section</option>"+
                             "@foreach ($teachers as $teacher)"+
                                 "@if($teacher['grade_level']==3)"+
-                                    "<option value='Section A'>{{ $teacher['section'] }}</option>"+
+                                    "<option value='{{ $teacher['section'] }}'>{{ $teacher['section'] }}</option>"+
                                 "@endif"+
                             "@endforeach";
         }
         else if(g==4){
-            document.getElementById("selectSection").innerHTML="<option value='Section A'>Select Section</option>"+
+            document.getElementById("selectSection").innerHTML="<option>Select Section</option>"+
                             "@foreach ($teachers as $teacher)"+
                                 "@if($teacher['grade_level']==4)"+
-                                    "<option value='Section A'>{{ $teacher['section'] }}</option>"+
+                                    "<option value='{{ $teacher['section'] }}'>{{ $teacher['section'] }}</option>"+
                                 "@endif"+
                             "@endforeach";
         }
         else if(g==5){
-            document.getElementById("selectSection").innerHTML="<option value='Section A'>Select Section</option>"+
+            document.getElementById("selectSection").innerHTML="<option>Select Section</option>"+
                             "@foreach ($teachers as $teacher)"+
                                 "@if($teacher['grade_level']==5)"+
-                                    "<option value='Section A'>{{ $teacher['section'] }}</option>"+
+                                    "<option value='{{ $teacher['section'] }}'>{{ $teacher['section'] }}</option>"+
                                 "@endif"+
                             "@endforeach";
         }
         else if(g==6){
-            document.getElementById("selectSection").innerHTML="<option value='Section A'>Select Section</option>"+
+            document.getElementById("selectSection").innerHTML="<option>Select Section</option>"+
                             "@foreach ($teachers as $teacher)"+
                                 "@if($teacher['grade_level']==6)"+
-                                    "<option value='Section A'>{{ $teacher['section'] }}</option>"+
+                                    "<option value='{{ $teacher['section'] }}'>{{ $teacher['section'] }}</option>"+
                                 "@endif"+
                             "@endforeach";
         }
