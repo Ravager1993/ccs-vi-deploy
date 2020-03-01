@@ -84,6 +84,9 @@
                 <div class="row">
                     <select name="" id="selectSection" class="mb-4 p-4 w-100">
                         <option value="Section A">Select Section</option>
+                        @foreach ($teachers as $teacher)
+                            <option value="Section A">$teacher->section</option>
+                        @endforeach
                         <option value="Section A">Section A</option>
                         <option value="Section A">Section B</option>
                         <option value="Section A">Section C</option>
