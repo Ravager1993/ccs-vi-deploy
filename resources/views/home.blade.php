@@ -6,70 +6,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 
-{{-- 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<div class="container-fluid blade home">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="container">
-        <div class="row">
-        <div class="col-md-12">
-            <canvas id="gradeLevelChart"></canvas>
-        </div>
-        
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <canvas id="gradeLevelChart2"></canvas>
-        </div>
-    </div> 
-    </div>
-
-    
-
-<div class="box-container">
-            <h2>Box Container</h2>
-    </div>
-    <div class="container py-4">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="isResizable pie-chart">
-                    <div class="chart-container">
-                      <canvas id="pieChart" width="10" height="9"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="isResizable line-chart">
-                    <div class="chart-container">
-                        <canvas id="chart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <button id="updateChart">Randomize Type of Chart (Line, Bar, Bubble)</button>
-            
-        </div>
-    </div>
-</div> --}}
 
 
 
@@ -86,7 +22,7 @@
                     <i class="material-icons"></i>
                 </div>
                 <div class="content">
-                    <div class="text">SECTION A</div>
+                    <div class="text">Daily Total</div>
                     <div class="number count-to" data-from="0" data-to="125">125</div>
                 </div>
             </div>
@@ -97,7 +33,7 @@
                     <i class="material-icons"></i>
                 </div>
                 <div class="content">
-                    <div class="text">SECTION B</div>
+                    <div class="text">Weekly AVG</div>
                     <div class="number count-to" data-from="0" data-to="257">257</div>
                 </div>
             </div>
@@ -108,7 +44,7 @@
                     <i class="material-icons"></i>
                 </div>
                 <div class="content">
-                    <div class="text">SECTION C</div>
+                    <div class="text">Monthly AVG</div>
                     <div class="number count-to" data-from="0" data-to="243">243</div>
                 </div>
             </div>
@@ -119,7 +55,7 @@
                     <i class="material-icons"></i>
                 </div>
                 <div class="content">
-                    <div class="text">SECTION D</div>
+                    <div class="text">Yearly AVG</div>
                     <div class="number count-to" data-from="0" data-to="1225">1225</div>
                 </div>
             </div>
@@ -134,28 +70,11 @@
                         <div class="col-xs-12 col-sm-6">
                             <h4>History</h4>
                         </div>
-                        {{-- <div class="col-xs-12 col-sm-6 align-right">
-                            <div class="switch panel-switch-btn">
-                                <span class="m-r-10 font-12">REAL TIME</span>
-                                <label>OFF<input type="checkbox" id="realtime" checked><span class="lever switch-col-cyan"></span>ON</label>
-                            </div>
-                        </div> --}}
+
                     </div>
-                    {{-- <ul class="header-dropdown">
-                        <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <i class="material-icons">more_vert</i>
-                            </a>
-                            <ul class="dropdown-menu pull-right">
-                                <li><a href="javascript:void(0);">Action</a></li>
-                                <li><a href="javascript:void(0);">Another action</a></li>
-                                <li><a href="javascript:void(0);">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul> --}}
+   
                 </div>
                 <div class="body isResizable">
-                    {{-- <div id="real_time_chart" class="dashboard-flot-chart"></div> --}}
                     <div class="container-fluid chart-containter">
                         <canvas id="chart" height="256"></canvas>
                     </div>
@@ -331,7 +250,23 @@
 
 
 
-
+<?php
+function OpenCon()
+ {
+ $dbhost = "localhost";
+ $dbuser = "root";
+ $db = "ccs_vi_db";
+ $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);
+ 
+ return $conn;
+ }
+ 
+function CloseCon($conn)
+ {
+ $conn -> close();
+ }
+   
+?>
 
 
 
