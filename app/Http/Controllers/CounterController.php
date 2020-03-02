@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
-use App\Counter;
+use App\Teacher;
 class CounterController extends Controller
 {
     public function index() {
-        $teachers = Counter::all()->toArray();
+        $teachers = Teacher::all()->toArray();
         return view('counter', compact('teachers'));
 
         // return view('counter');

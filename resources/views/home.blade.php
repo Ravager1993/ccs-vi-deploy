@@ -23,7 +23,10 @@
                 </div>
                 <div class="content">
                     <div class="text">Daily Total</div>
-                    <div class="number count-to" data-from="0" data-to="125">125</div>
+                    <div class="number count-to" data-from="0" data-to="125">
+                        {{-- @if() --}}
+                        {{ $students }}
+                    </div>
                 </div>
             </div>
         </div>
