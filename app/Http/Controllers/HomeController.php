@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $count = Counter::all()->toArray();
+        $count = Counter::all();
         return view('home');
     }
 }
