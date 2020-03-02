@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Counter extends Model
+class Statistic extends Model
 {
     protected $table = 'counter';
 }

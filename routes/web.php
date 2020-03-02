@@ -28,3 +28,5 @@ Route::get('/counter', 'CounterController@index');
 Route::post('/submitCounter', 'CounterController@submit');
 
 Route::get('/maintenance', 'MaintenanceController@index');
+
+Route::get('/statistic', 'StatisticController@index');
