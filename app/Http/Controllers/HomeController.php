@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Counter;
-
 class HomeController extends Controller
 {
     /**
@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $count = Counter::all();
-        return view('home');
+        $students = DB::table('counter')->count();
+        return view('home', ['students' => $students]);
     }
 }

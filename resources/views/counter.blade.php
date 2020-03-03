@@ -152,11 +152,4 @@
     }
 </script>
 
-<table class="table table-border">
-    @foreach($count as $row)
-    <tr>
-        <td>{{ $row['grade_level'] }}</td>
-        <td>{{ $row['section'] }}</td>
-    </tr>
-    @endforeach
 @endsection
