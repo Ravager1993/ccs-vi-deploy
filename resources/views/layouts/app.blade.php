@@ -24,7 +24,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <script src="{{ asset('js/fontawesome.min.js') }}"></script>
-    <script src="{{ asset('js/chart.min.js') }} "></script>
+    <script src="{{ asset('js/chart.js') }} "></script>
 
     <script src="{{ asset('js/script.js') }}"></script>
 
@@ -100,13 +100,13 @@
                         </a>
                         <ul class="collapse list-unstyled" id="subStatistics">
                             <li>
-                                <a href="/statistic">Daily</a>
+                                <a href="/dailystat">Daily</a>
                             </li>
                             <li>
-                                <a href="#">Weekly</a>
+                                <a href="/weeklystat">Weekly</a>
                             </li>
                             <li>
-                                <a href="#">Monthly</a>
+                                <a href="/monthlystat">Monthly</a>
                             </li>
                             <li>
                                 <a href="#">Yearly</a>

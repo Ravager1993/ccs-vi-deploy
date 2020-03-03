@@ -57,30 +57,6 @@
                     </div>
                 </label>
 
-            {{-- <div class="form-control my-4">
-                <label for="grade2">Grade 2</label>
-                <input type="radio" name="radio-grade" id="grade2">
-            </div>
-
-            <div class="form-control my-4">
-                <label for="grade3">Grade 3</label>
-                <input type="radio" name="radio-grade" id="grade3">
-            </div>
-
-            <div class="form-control my-4">
-                <label for="grade4">Grade 4</label>
-                <input type="radio" name="radio-grade" id="grade4">
-            </div>
-
-            <div class="form-control my-4">
-                <label for="grade5">Grade 5</label>
-                <input type="radio" name="radio-grade" id="grade5">
-            </div>
-
-            <div class="form-control my-4">
-                <label for="grade6">Grade 6</label>
-                <input type="radio" name="radio-grade" id="grade6">
-            </div> --}}
         </div>
         
         <div class="col-md-7">
