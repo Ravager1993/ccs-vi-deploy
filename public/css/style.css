@@ -572,6 +572,11 @@ a.user-drop[aria-expanded="true"] {
     padding-right: 128px;
 }
 
+.counter-page input[type="submit"] {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
 
 
 #footer {

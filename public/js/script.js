@@ -34,175 +34,175 @@ window.randomScalingFactor = function () {
     // return ((Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100) + 100);
 };
 
-var config = {
-    type: 'line',
-    data: {
-        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        // labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        datasets: [
-            {
-            label: "Grade 1",
-            fill: false,
-            backgroundColor: window.chartColors.red,
-            borderColor: window.chartColors.red,
-            lineTension: 0,
-            borderWidth: 1,
-            // borderDash: [2, 2],
-            data: [
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
-            ],
-        }, {
-            label: "Grade 2",
-            fill: false,
-            backgroundColor: window.chartColors.orange,
-            borderColor: window.chartColors.orange,
-            lineTension: 0,
-            borderWidth: 1,
-            borderDash: [4, 1],
-            data: [
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
-            ],
-        }, {
-            label: "Grade 3",
-            backgroundColor: window.chartColors.yellow,
-            borderColor: window.chartColors.yellow,
-            lineTension: 0,
-            borderWidth: 1,
-            borderDash: [8, 1],
-            data: [
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
-            ],
-            fill: false,
-        }, {
-            label: "Grade 4",
-            backgroundColor: window.chartColors.green,
-            borderColor: window.chartColors.green,
-            lineTension: 0,
-            borderWidth: 1,
-            borderDash: [8, 1],
-            data: [
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
-            ],
-            fill: false,
-        }, {
-            label: "Grade 5",
-            backgroundColor: window.chartColors.blue,
-            borderColor: window.chartColors.blue,
-            lineTension: 0,
-            borderWidth: 1,
-            borderDash: [8, 1],
-            data: [
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
-            ],
-            fill: false,
-        }, {
-            label: "Grade 6",
-            backgroundColor: window.chartColors.purple,
-            borderColor: window.chartColors.purple,
-            lineTension: 0,
-            borderWidth: 1,
-            borderDash: [8, 1],
-            data: [
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
-            ],
-            fill: false,
-        }
-    ]
-    },
-    options: {
-        maintainAspectRatio: false,
-        responsive: true,
-        // legend: {
-        //     position: 'top'
-        // },
-        title: {
-            // position: 'bottom',
-            display: true,
-            text: 'Statistics'
-        },
-        tooltips: {
-            mode: 'index',
-            intersect: false,
-        },
-        hover: {
-            mode: 'nearest',
-            intersect: true
-        },
-        scales: {
-            xAxes: [{
-                gridLines: {
-                    display: false
-                }
-            }]
-        }
-    }
-};
+// var config = {
+//     type: 'line',
+//     data: {
+//         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+//         // labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+//         datasets: [
+//             {
+//             label: "Grade 1",
+//             fill: false,
+//             backgroundColor: window.chartColors.red,
+//             borderColor: window.chartColors.red,
+//             lineTension: 0,
+//             borderWidth: 1,
+//             // borderDash: [2, 2],
+//             data: [
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor()
+//             ],
+//         }, {
+//             label: "Grade 2",
+//             fill: false,
+//             backgroundColor: window.chartColors.orange,
+//             borderColor: window.chartColors.orange,
+//             lineTension: 0,
+//             borderWidth: 1,
+//             borderDash: [4, 1],
+//             data: [
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor()
+//             ],
+//         }, {
+//             label: "Grade 3",
+//             backgroundColor: window.chartColors.yellow,
+//             borderColor: window.chartColors.yellow,
+//             lineTension: 0,
+//             borderWidth: 1,
+//             borderDash: [8, 1],
+//             data: [
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor()
+//             ],
+//             fill: false,
+//         }, {
+//             label: "Grade 4",
+//             backgroundColor: window.chartColors.green,
+//             borderColor: window.chartColors.green,
+//             lineTension: 0,
+//             borderWidth: 1,
+//             borderDash: [8, 1],
+//             data: [
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor()
+//             ],
+//             fill: false,
+//         }, {
+//             label: "Grade 5",
+//             backgroundColor: window.chartColors.blue,
+//             borderColor: window.chartColors.blue,
+//             lineTension: 0,
+//             borderWidth: 1,
+//             borderDash: [8, 1],
+//             data: [
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor()
+//             ],
+//             fill: false,
+//         }, {
+//             label: "Grade 6",
+//             backgroundColor: window.chartColors.purple,
+//             borderColor: window.chartColors.purple,
+//             lineTension: 0,
+//             borderWidth: 1,
+//             borderDash: [8, 1],
+//             data: [
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor(),
+//                 randomScalingFactor()
+//             ],
+//             fill: false,
+//         }
+//     ]
+//     },
+//     options: {
+//         maintainAspectRatio: false,
+//         responsive: true,
+//         // legend: {
+//         //     position: 'top'
+//         // },
+//         title: {
+//             // position: 'bottom',
+//             display: true,
+//             text: 'Statistics'
+//         },
+//         tooltips: {
+//             mode: 'index',
+//             intersect: false,
+//         },
+//         hover: {
+//             mode: 'nearest',
+//             intersect: true
+//         },
+//         scales: {
+//             xAxes: [{
+//                 gridLines: {
+//                     display: false
+//                 }
+//             }]
+//         }
+//     }
+// };
 
 
 
@@ -230,5 +230,17 @@ window.onload = function () {
 //Use JQUeryUI to resize the div with IE 11
 // $(".isResizable").resizable();
 
+//counter
 
+function checkValid(g){
+    if(g==0 || document.getElementById("grade"+g).checked==true)
+        document.getElementById("selectSection").disabled=false;
+    else
+        document.getElementById("selectSection").disabled = true;
+
+    if (document.getElementById("selectSection").value != "Select Section")
+        document.getElementById("submitEntry").disabled = false;
+    else
+        document.getElementById("submitEntry").disabled = true;
+}
 

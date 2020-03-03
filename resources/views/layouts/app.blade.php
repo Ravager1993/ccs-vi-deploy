@@ -100,7 +100,7 @@
                         </a>
                         <ul class="collapse list-unstyled" id="subStatistics">
                             <li>
-                                <a href="#">Daily</a>
+                                <a href="/statistic">Daily</a>
                             </li>
                             <li>
                                 <a href="#">Weekly</a>
