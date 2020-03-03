@@ -100,13 +100,13 @@
                         </a>
                         <ul class="collapse list-unstyled" id="subStatistics">
                             <li>
-                                <a href="/statistic">Daily</a>
+                                <a href="/dailystat">Daily</a>
                             </li>
                             <li>
-                                <a href="#">Weekly</a>
+                                <a href="/weeklystat">Weekly</a>
                             </li>
                             <li>
-                                <a href="#">Monthly</a>
+                                <a href="/monthlystat">Monthly</a>
                             </li>
                             <li>
                                 <a href="#">Yearly</a>
