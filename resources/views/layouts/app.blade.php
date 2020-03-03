@@ -24,7 +24,7 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <script src="{{ asset('js/fontawesome.min.js') }}"></script>
-    <script src="{{ asset('js/chart.min.js') }} "></script>
+    <script src="{{ asset('js/chart.js') }} "></script>
 
     <script src="{{ asset('js/script.js') }}"></script>
 

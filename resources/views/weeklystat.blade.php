@@ -1,11 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<?php
-    use Carbon\Carbon;
-?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-{{-- <script src="{{ asset('js/chart.js') }}"></script> --}}
 <script>
     var g1W1=0;
     var g1W2=0;
@@ -163,7 +158,7 @@
             <script>g4Data(2);</script>
         @elseif(($count['grade_level']==4) && (date('W', strtotime($count['created_at']))%4)==2)
             <script>g4Data(3);</script>
-        @elseif(($count['grade_level']=42) && (date('W', strtotime($count['created_at']))%4)==3)
+        @elseif(($count['grade_level']==4) && (date('W', strtotime($count['created_at']))%4)==3)
             <script>g4Data(4);</script>
         @endif
 
