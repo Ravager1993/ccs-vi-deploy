@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Counter;
+use Carbon\Traits\Timestamp;
+
+// date_default_timezone_set("Asia/Manila");
+
 class HomeController extends Controller
 {
     /**
@@ -22,9 +26,20 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+     
     public function index()
     {
-        $students = DB::table('counter')->count();
-        return view('home', ['students' => $students]);
+  
+        $thisDay = date('Y-m-d');
+        $thisMonth = date('Y-m');
+        $thisYear = date('Y');
+        $daily = Counter::all()->whereBetween('created_at', [$thisDay.' 00:00:00', $thisDay.' 24:00:00']);
+        $gradeLevel = Counter::all()->where('grade_level', 2);
+
+        return view('home',
+            ['daily' => count($daily)],
+            ['gradeLevel' => $gradeLevel]
+        );
     }
 }

@@ -1,10 +1,12 @@
 <?php
-
 namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 use App\Counter;
 use App\Teacher;
+
+// date_default_timezone_set("Asia/Manila");
+
 class CounterController extends Controller
 {
     public function index() {
