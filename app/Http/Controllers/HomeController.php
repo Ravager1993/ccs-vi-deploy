@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 use App\Counter;
 use Carbon\Traits\Timestamp;
 
-// date_default_timezone_set("Asia/Manila");
 
 class HomeController extends Controller
 {
@@ -30,16 +29,31 @@ class HomeController extends Controller
      
     public function index()
     {
+
+        $numDays = date('t');
   
         $thisDay = date('Y-m-d');
         $thisMonth = date('Y-m');
         $thisYear = date('Y');
+
+        // $weeklyAverage = date()
+        $counter = Counter::all();
         $daily = Counter::all()->whereBetween('created_at', [$thisDay.' 00:00:00', $thisDay.' 24:00:00']);
-        $gradeLevel = Counter::all()->where('grade_level', 2);
+        $monthly = Counter::all()->whereBetween('created_at', [$thisMonth . '-01 00:00:00', $thisMonth . '-' . $numDays . '24:00:00']);
+        $yearly = Counter::all()->whereBetween('created_at', [$thisYear.'-01-01 00:00:00', $thisYear.'-12-31 24:00:00']);
+        // $weekly = Counter::all()->whereBetween('created_at', [$thisYear.'-'.date('m')-1]
+        // $gl1 = Counter::all()->where('grade_level', '1');
+
+        ///////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////////////
 
         return view('home',
-            ['daily' => count($daily)],
-            ['gradeLevel' => $gradeLevel]
+            ['counter' => $counter],
+            [
+                'daily' => count($daily),
+                'monthly' => count($monthly),
+                'yearly' => count($yearly),
+            ],
         );
     }
 }

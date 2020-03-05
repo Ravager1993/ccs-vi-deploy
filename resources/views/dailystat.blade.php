@@ -4,7 +4,7 @@
 <?php
     use Carbon\Carbon;
 ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script> --}}
 {{-- <script src="{{ asset('js/chart.js') }}"></script> --}}
 <script>
     var g1Mon=0;

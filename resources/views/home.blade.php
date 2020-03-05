@@ -10,7 +10,8 @@
 
 <div class="container-fluid">
     <div class="block-header">
-        <h4>DASHBOARD</h4>
+        <h4>DASHBOARD</h4><br>
+        {{-- {{ $testDate }} --}}
     </div>
 
     <div class="row clearfix">
@@ -35,7 +36,7 @@
                 <div class="content">
                     <div class="text">Weekly AVG</div>
                     <div class="number count-to" data-from="0" data-to="257">
-                        {{  count($gradeLevel) }}
+                        {{ $yearly }}
                     </div>
                 </div>
             </div>
@@ -48,8 +49,7 @@
                 <div class="content">
                     <div class="text">Monthly AVG</div>
                     <div class="number count-to" data-from="0" data-to="243">
-                        {{ date('Y-m-d') }}
-                        {{-- {{ strtoftime(date(Y)) }} --}}
+                        {{ $monthly }}
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                 <div class="content">
                     <div class="text">Yearly AVG</div>
                     <div class="number count-to" data-from="0" data-to="1225">
-                        {{ date('h:i:s') }}
+                        {{ $yearly }}
                     </div>
                 </div>
             </div>
@@ -246,6 +246,11 @@
         </div>
     </div>
 
+
+    @foreach ($counter as $count)
+        <script>addData();</script>
+    @endforeach 
+
 </div>
 
 
@@ -403,7 +408,8 @@
         title: {
             // position: 'bottom',
             display: true,
-            text: 'Statistics'
+            // text: 'Statistics'
+            text: 'HELLO'
         },
         tooltips: {
             mode: 'index',

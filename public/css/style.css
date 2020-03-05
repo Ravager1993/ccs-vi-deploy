@@ -562,6 +562,8 @@ a.user-drop[aria-expanded="true"] {
     border: none;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
+    -webkit-appearance: none;
+    appearance: none;
 }
 .counter-page input[type="submit"] {
     padding: 0 100px;
