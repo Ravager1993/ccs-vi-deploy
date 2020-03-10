@@ -83,7 +83,7 @@
                 </div>
                 <div class="body isResizable">
                     <div class="container-fluid chart-containter">
-                        <canvas id="chart" height="256"></canvas>
+                        <canvas id="chart" height="360"></canvas>
                     </div>
                 </div>
             </div>

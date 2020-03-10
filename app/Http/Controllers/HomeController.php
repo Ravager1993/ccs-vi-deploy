@@ -36,18 +36,12 @@ class HomeController extends Controller
         $thisMonth = date('Y-m');
         $thisYear = date('Y');
 
-        // $weeklyAverage = date()
         $counter = Counter::all();
         $daily = Counter::all()->whereBetween('created_at', [$thisDay.' 00:00:00', $thisDay.' 24:00:00']);
         $monthly = Counter::all()->whereBetween('created_at', [$thisMonth . '-01 00:00:00', $thisMonth . '-' . $numDays . '24:00:00']);
         $yearly = Counter::all()->whereBetween('created_at', [$thisYear.'-01-01 00:00:00', $thisYear.'-12-31 24:00:00']);
-        // $weekly = Counter::all()->whereBetween('created_at', [$thisYear.'-'.date('m')-1]
-        // $gl1 = Counter::all()->where('grade_level', '1');
 
-        ///////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////////////
-
-        return view('home',
+        return view('admin.index',
             ['counter' => $counter],
             [
                 'daily' => count($daily),

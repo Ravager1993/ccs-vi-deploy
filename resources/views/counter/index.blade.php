@@ -1,14 +1,10 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container counter-page">
     <h2>Counter</h2>
-    @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
-    @endif
-    <form action="/submitCounter" method="post">
+    @include('partials.formerrors')
+    
+    <form action="{{ route('counterSubmit') }}" method="post">
         @csrf
         <div class="row">
              <div class="col-md-5">

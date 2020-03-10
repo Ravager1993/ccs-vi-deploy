@@ -11,23 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', 'CounterController@index')->name('counter');
+Route::get('/counter', 'CounterController@index')->name('counter');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/student', 'StudentController@index');
+Route::get('/student', 'StudentController@index')->name('student');
+Route::post('/studentSubmit', 'StudentController@submit')->name('studentSubmit');
+Route::post('/counterCount', 'CounterController@submit')->name('counterSubmit');
 
-Route::post('/studentSubmit', 'StudentController@submit');
-
-Route::get('/counter', 'CounterController@index');
-
-Route::post('/submitCounter', 'CounterController@submit');
-
-Route::get('/maintenance', 'MaintenanceController@index');
+Route::get('/maintenance', 'MaintenanceController@index')->name('maintenance');
 
 Route::get('/dailystat', 'StatisticController@daily');
 
