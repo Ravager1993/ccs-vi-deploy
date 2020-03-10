@@ -27,13 +27,13 @@
                         </a>
                         <ul class="collapse list-unstyled" id="subStatistics">
                             <li>
-                                <a href="/dailystat">Daily</a>
+                                <a href="{{ route('dailystat') }}">Daily</a>
                             </li>
                             <li>
-                                <a href="/weeklystat">Weekly</a>
+                                <a href="{{ route('weeklystat') }}">Weekly</a>
                             </li>
                             <li>
-                                <a href="/monthlystat">Monthly</a>
+                                <a href="{{ route('monthlystat') }}">Monthly</a>
                             </li>
                             <li>
                                 <a href="#">Yearly</a>

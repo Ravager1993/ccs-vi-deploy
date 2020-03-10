@@ -23,8 +23,8 @@ Route::post('/counterCount', 'CounterController@submit')->name('counterSubmit');
 
 Route::get('/maintenance', 'MaintenanceController@index')->name('maintenance');
 
-Route::get('/dailystat', 'StatisticController@daily');
+Route::get('/dailystat', 'StatisticController@daily')->name('dailystat');
 
-Route::get('/weeklystat', 'StatisticController@weekly');
+Route::get('/weeklystat', 'StatisticController@weekly')->name('weeklystat');
 
-Route::get('/monthlystat', 'StatisticController@monthly');
+Route::get('/monthlystat', 'StatisticController@monthly')->name('monthlystat');
