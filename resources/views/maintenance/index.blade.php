@@ -20,15 +20,15 @@
                             <th width="128px" class="text-center">Grade Level</th>
                             <th width="128px" class="text-center">Section</th>
                             <th width="192px" class="text-center">
-                                <input 
-                                    type="button" 
-                                    value="Add" 
+                                <button 
+                                    type="button"
                                     name="add" 
                                     id="add" 
                                     data-toggle="modal" 
                                     data-target="#add_data_Modal" 
-                                    class="btn btn-info"
-                                >
+                                    class="btn btn-primary">
+                                    <i class="fas fa-plus"></i>
+                                </button>
                             </th>
                         </tr>
                     </thead>
@@ -43,21 +43,26 @@
                             <td class="text-center">{{$value->grade_level}}</td>
                             <td class="text-center">{{$value->section}}</td>
                             <td class="text-center">
-                                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" 
-                                    data-target="#edit_data_Modal">
-                                    {{-- <i class="glyphicon glyphicon-trash">Delete</i> --}}
-                                    Edit
-                                </button>
-                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" 
-                                    data-target="#delete_data_Modal">
-                                    {{-- <i class="glyphicon glyphicon-trash">Delete</i> --}}
-                                    Delete
-                                </button>
+                                <div class="btn-group mr-2">
+                                    <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" 
+                                        data-target="#edit_data_Modal">
+                                        <i class="fas fa-edit"></i>
+                                        {{-- <div class="btn-icon edit">
+                                        </div> --}}
+                                    </button>
+                                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" 
+                                        data-target="#delete_data_Modal">
+                                        {{-- <div class="btn-icon delete">
+                                        </div> --}}
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                         
                     @endforeach
                 </table>
+                {{ $teacher->links() }}
             </div>
     
         </div>

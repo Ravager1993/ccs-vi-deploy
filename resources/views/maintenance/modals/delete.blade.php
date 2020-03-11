@@ -6,8 +6,8 @@
                 <button class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <form method="post">
-
+                <form method="post" action="/deleteTeacher">
+                    @csrf
                     <div class="form-group row">
                         <div class="col-12">
                             <input 

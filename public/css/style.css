@@ -592,6 +592,16 @@ a.user-drop[aria-expanded="true"] {
 
 
 
+.btn-icon {
+    /* background-image: url("../img/icons-12.png"); */
+    background-size: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 16px;;
+    height: 16px;
+
+}
+
 
 #footer {
     margin-top: 24px;
@@ -603,3 +613,4 @@ a.user-drop[aria-expanded="true"] {
 #footer p {
     line-height: 70px;
 }
+

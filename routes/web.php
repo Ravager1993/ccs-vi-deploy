@@ -22,6 +22,8 @@ Route::post('/studentSubmit', 'StudentController@submit')->name('studentSubmit')
 Route::post('/counterCount', 'CounterController@submit')->name('counterSubmit');
 
 Route::get('/maintenance', 'MaintenanceController@index')->name('maintenance');
+Route::post('/addTeacher', 'MaintenanceController@insert')->name('addTeacher');
+Route::post('/deleteTeacher', 'MaintenanceController@insert')->name('addTeacher');
 
 Route::get('/dailystat', 'StatisticController@daily');
 
