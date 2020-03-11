@@ -36,7 +36,7 @@
                                 <a href="{{ route('monthlystat') }}">Monthly</a>
                             </li>
                             <li>
-                                <a href="#">Yearly</a>
+                                <a href="{{ route('yearlystat') }}">Yearly</a>
                             </li>
                         </ul>
                     </li>

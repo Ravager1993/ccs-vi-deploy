@@ -28,3 +28,5 @@ Route::get('/dailystat', 'StatisticController@daily')->name('dailystat');
 Route::get('/weeklystat', 'StatisticController@weekly')->name('weeklystat');
 
 Route::get('/monthlystat', 'StatisticController@monthly')->name('monthlystat');
+
+Route::get('/yearlystat', 'StatisticController@yearly')->name('yearlystat');

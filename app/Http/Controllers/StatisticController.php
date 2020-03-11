@@ -36,4 +36,13 @@ class StatisticController extends Controller
 
         //return view('statistic');
     }
+
+    public function yearly() {
+        $counter = Counter::all();
+        // $counter = DB::table('counter');
+        return view('statistics.yearlystat', ['counter' => $counter]);
+        // return view('statistic', compact('g1c'));
+
+        //return view('statistic');
+    }
 }

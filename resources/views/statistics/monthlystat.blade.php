@@ -271,162 +271,163 @@
         </div>
     </div>
     @foreach ($counter as $count)
-        @if (($count['grade_level']==1) && date('m', strtotime($count['created_at']))==1)
-            <script>g1Data(1);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==2)
-            <script>g1Data(2);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==3)
-            <script>g1Data(3);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==4)
-            <script>g1Data(4);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==5)
-            <script>g1Data(5);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==6)
-            <script>g1Data(6);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==7)
-            <script>g1Data(7);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==8)
-            <script>g1Data(8);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==9)
-            <script>g1Data(9);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==10)
-            <script>g1Data(10);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==11)
-            <script>g1Data(11);</script>
-        @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==12)
-            <script>g1Data(12);</script>    
-        @endif
+        @if(date('Y',strtotime($count['created_at'])) >= date('Y',strtotime('-1 year')))
+            @if (($count['grade_level']==1) && date('m', strtotime($count['created_at']))==1)
+                <script>g1Data(1);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==2)
+                <script>g1Data(2);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==3)
+                <script>g1Data(3);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==4)
+                <script>g1Data(4);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==5)
+                <script>g1Data(5);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==6)
+                <script>g1Data(6);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==7)
+                <script>g1Data(7);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==8)
+                <script>g1Data(8);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==9)
+                <script>g1Data(9);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==10)
+                <script>g1Data(10);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==11)
+                <script>g1Data(11);</script>
+            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==12)
+                <script>g1Data(12);</script>    
+            @endif
 
-        @if (($count['grade_level']==2) && date('m', strtotime($count['created_at']))==1)
-            <script>g2Data(1);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==2)
-            <script>g2Data(2);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==3)
-            <script>g2Data(3);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==4)
-            <script>g2Data(4);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==5)
-            <script>g2Data(5);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==6)
-            <script>g2Data(6);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==7)
-            <script>g2Data(7);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==8)
-            <script>g2Data(8);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==9)
-            <script>g2Data(9);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==10)
-            <script>g2Data(10);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==11)
-            <script>g2Data(11);</script>
-        @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==12)
-            <script>g2Data(12);</script>    
-        @endif
+            @if (($count['grade_level']==2) && date('m', strtotime($count['created_at']))==1)
+                <script>g2Data(1);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==2)
+                <script>g2Data(2);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==3)
+                <script>g2Data(3);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==4)
+                <script>g2Data(4);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==5)
+                <script>g2Data(5);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==6)
+                <script>g2Data(6);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==7)
+                <script>g2Data(7);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==8)
+                <script>g2Data(8);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==9)
+                <script>g2Data(9);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==10)
+                <script>g2Data(10);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==11)
+                <script>g2Data(11);</script>
+            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==12)
+                <script>g2Data(12);</script>    
+            @endif
 
-        @if (($count['grade_level']==3) && date('m', strtotime($count['created_at']))==1)
-            <script>g3Data(1);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==2)
-            <script>g3Data(2);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==3)
-            <script>g3Data(3);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==4)
-            <script>g3Data(4);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==5)
-            <script>g3Data(5);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==6)
-            <script>g3Data(6);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==7)
-            <script>g3Data(7);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==8)
-            <script>g3Data(8);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==9)
-            <script>g3Data(9);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==10)
-            <script>g3Data(10);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==11)
-            <script>g3Data(11);</script>
-        @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==12)
-            <script>g3Data(12);</script>    
-        @endif
+            @if (($count['grade_level']==3) && date('m', strtotime($count['created_at']))==1)
+                <script>g3Data(1);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==2)
+                <script>g3Data(2);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==3)
+                <script>g3Data(3);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==4)
+                <script>g3Data(4);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==5)
+                <script>g3Data(5);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==6)
+                <script>g3Data(6);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==7)
+                <script>g3Data(7);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==8)
+                <script>g3Data(8);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==9)
+                <script>g3Data(9);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==10)
+                <script>g3Data(10);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==11)
+                <script>g3Data(11);</script>
+            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==12)
+                <script>g3Data(12);</script>    
+            @endif
 
-        @if (($count['grade_level']==4) && date('m', strtotime($count['created_at']))==1)
-            <script>g4Data(1);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==2)
-            <script>g4Data(2);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==3)
-            <script>g4Data(3);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==4)
-            <script>g4Data(4);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==5)
-            <script>g4Data(5);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==6)
-            <script>g4Data(6);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==7)
-            <script>g4Data(7);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==8)
-            <script>g4Data(8);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==9)
-            <script>g4Data(9);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==10)
-            <script>g4Data(10);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==11)
-            <script>g4Data(11);</script>
-        @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==12)
-            <script>g4Data(12);</script>    
-        @endif
+            @if (($count['grade_level']==4) && date('m', strtotime($count['created_at']))==1)
+                <script>g4Data(1);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==2)
+                <script>g4Data(2);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==3)
+                <script>g4Data(3);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==4)
+                <script>g4Data(4);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==5)
+                <script>g4Data(5);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==6)
+                <script>g4Data(6);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==7)
+                <script>g4Data(7);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==8)
+                <script>g4Data(8);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==9)
+                <script>g4Data(9);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==10)
+                <script>g4Data(10);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==11)
+                <script>g4Data(11);</script>
+            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==12)
+                <script>g4Data(12);</script>    
+            @endif
 
-        @if (($count['grade_level']==5) && date('m', strtotime($count['created_at']))==1)
-            <script>g5Data(1);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==2)
-            <script>g5Data(2);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==3)
-            <script>g5Data(3);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==4)
-            <script>g5Data(4);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==5)
-            <script>g5Data(5);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==6)
-            <script>g5Data(6);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==7)
-            <script>g5Data(7);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==8)
-            <script>g5Data(8);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==9)
-            <script>g5Data(9);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==10)
-            <script>g5Data(10);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==11)
-            <script>g5Data(11);</script>
-        @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==12)
-            <script>g5Data(12);</script>    
-        @endif
+            @if (($count['grade_level']==5) && date('m', strtotime($count['created_at']))==1)
+                <script>g5Data(1);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==2)
+                <script>g5Data(2);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==3)
+                <script>g5Data(3);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==4)
+                <script>g5Data(4);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==5)
+                <script>g5Data(5);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==6)
+                <script>g5Data(6);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==7)
+                <script>g5Data(7);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==8)
+                <script>g5Data(8);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==9)
+                <script>g5Data(9);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==10)
+                <script>g5Data(10);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==11)
+                <script>g5Data(11);</script>
+            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==12)
+                <script>g5Data(12);</script>    
+            @endif
 
-        @if (($count['grade_level']==6) && date('m', strtotime($count['created_at']))==1)
-            <script>g6Data(1);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==2)
-            <script>g6Data(2);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==3)
-            <script>g6Data(3);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==4)
-            <script>g6Data(4);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==5)
-            <script>g6Data(5);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==6)
-            <script>g6Data(6);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==7)
-            <script>g6Data(7);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==8)
-            <script>g6Data(8);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==9)
-            <script>g6Data(9);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==10)
-            <script>g6Data(10);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==11)
-            <script>g6Data(11);</script>
-        @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==12)
-            <script>g6Data(12);</script>    
+            @if (($count['grade_level']==6) && date('m', strtotime($count['created_at']))==1)
+                <script>g6Data(1);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==2)
+                <script>g6Data(2);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==3)
+                <script>g6Data(3);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==4)
+                <script>g6Data(4);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==5)
+                <script>g6Data(5);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==6)
+                <script>g6Data(6);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==7)
+                <script>g6Data(7);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==8)
+                <script>g6Data(8);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==9)
+                <script>g6Data(9);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==10)
+                <script>g6Data(10);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==11)
+                <script>g6Data(11);</script>
+            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==12)
+                <script>g6Data(12);</script>    
+            @endif
         @endif
-
     @endforeach
     <span id="test"></span>
     <script>
