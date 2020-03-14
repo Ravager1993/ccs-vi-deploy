@@ -26,8 +26,10 @@ Route::post('/addTeacher', 'MaintenanceController@insert')->name('addTeacher');
 Route::post('/deleteTeacher', 'MaintenanceController@delete')->name('deleteTeacher');
 Route::post('/updateTeacher', 'MaintenanceController@update')->name('updateTeacher');
 
-Route::get('/dailystat', 'StatisticController@daily');
+Route::get('/dailystat', 'StatisticController@daily')->name('dailystat');
 
-Route::get('/weeklystat', 'StatisticController@weekly');
+Route::get('/weeklystat', 'StatisticController@weekly')->name('weeklystat');
 
-Route::get('/monthlystat', 'StatisticController@monthly');
+Route::get('/monthlystat', 'StatisticController@monthly')->name('monthlystat');
+
+Route::get('/yearlystat', 'StatisticController@yearly')->name('yearlystat');
