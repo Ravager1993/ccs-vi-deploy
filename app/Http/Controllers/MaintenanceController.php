@@ -11,7 +11,7 @@ class MaintenanceController extends Controller
         $this->middleware('auth');
     }
     public function index() {
-        $teacher = Teacher::latest()->paginate(5);
+        $teacher = Teacher::latest()->paginate(10);
         return view('maintenance.index', compact('teacher'));
     }
 
@@ -22,12 +22,28 @@ class MaintenanceController extends Controller
         $teacher->grade_level = $req->grade_level;
         $teacher->section = $req->section;
         $teacher->save();
-        return redirect('maintenance');
+        return redirect('maintenance')->with('status', 'Successfully added teacher');
 
     }
 
     public function delete(Request $req) {
+        $teacher = Teacher::where('id', $req->deleteID);
+        $teacher->delete();
+        return redirect('maintenance')->with('status', 'Successfully deleted teacher');
 
+    }
+
+    public function update(Request $req) {
+        $teacher = Teacher::where('id', $req->updateID);
+        $teacher->update(
+            [
+                'first_name' => $req->first_name,
+                'last_name' => $req->last_name,
+                'grade_level' => $req->grade_level,
+                'section' => $req->section
+            ]
+            );
+        return redirect('maintenance')->with('status', 'Successfully updated teacher');
     }
     
 }

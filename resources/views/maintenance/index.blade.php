@@ -15,7 +15,7 @@
                     <thead class="thead-light">
                         <tr>
                             <th width="80px">No</th>
-                            <th>Firsname</th>
+                            <th>Firstname</th>
                             <th>Lastname</th>
                             <th width="128px" class="text-center">Grade Level</th>
                             <th width="128px" class="text-center">Section</th>
@@ -35,7 +35,6 @@
 
                     <?php $no=1; ?>
                     @foreach ($teacher as $key => $value)
-
                         <tr>
                             <td>{{$no++}}</td>
                             <td>{{$value->first_name}}</td>
@@ -45,15 +44,17 @@
                             <td class="text-center">
                                 <div class="btn-group mr-2">
                                     <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" 
-                                        data-target="#edit_data_Modal">
+                                        data-target="#edit_data_Modal" 
+                                        onclick="updateTeacher(
+                                            {{ $value->id }}, 
+                                            '{{ $value->first_name }}', 
+                                            '{{ $value->last_name }}', 
+                                            {{ $value->grade_level }}, 
+                                            '{{ $value->section }}')">
                                         <i class="fas fa-edit"></i>
-                                        {{-- <div class="btn-icon edit">
-                                        </div> --}}
                                     </button>
                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" 
-                                        data-target="#delete_data_Modal">
-                                        {{-- <div class="btn-icon delete">
-                                        </div> --}}
+                                        data-target="#delete_data_Modal" onclick="deleteTeacher({{ $value->id }} )">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
                                 </div>

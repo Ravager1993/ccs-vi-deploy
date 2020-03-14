@@ -56,3 +56,14 @@ function checkValid(g){
         document.getElementById("submitEntry").disabled = true;
 }
 
+//////////////////////////////////////////////////////////////////////////
+
+function tempAlert(msg, duration) {
+    var el = document.createElement("div");
+    el.classList.add('alert-style')
+    el.innerHTML = msg;
+    setTimeout(function () {
+        el.parentNode.removeChild(el);
+    }, duration);
+    document.body.appendChild(el);
+}

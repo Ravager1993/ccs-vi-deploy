@@ -11,19 +11,19 @@
                     <div class="form-group row">
                         <label for="firstName" class="col-12 col-form-label" autofocus>Firstname</label>
                         <div class="col-12">
-                            <input type="text" name="first_name" id="firstName" class="form-control">
+                            <input type="text" name="first_name" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="lastName" class="col-12 col-form-label">Lastname</label>
                         <div class="col-12">
-                            <input type="text" name="last_name" id="lastName" class="form-control">
+                            <input type="text" name="last_name" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="gradeLevel" class="col-12 col-form-label">Grade level</label>
                         <div class="col-12">
-                            <select name="grade_level" id="gradeLevel" class="form-control">
+                            <select name="grade_level" class="form-control" required>
                                 <option value="">-- Select grade level --</option>
                                 <option value="1">Grade 1</option>
                                 <option value="2">Grade 2</option>
@@ -37,13 +37,13 @@
                     <div class="form-group row">
                         <label for="section" class="col-12 col-form-label">Section</label>
                         <div class="col-12">
-                            <input type="text" name="section" id="section" class="form-control">
+                            <input type="text" name="section" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-12">
-                            <button type="submit" class="btn btn-success">Submit</button>
+                            <button type="submit" class="btn btn-success" name="insert">Submit</button>
                             {{-- <input 
                             type="submit" 
                             value="Submit" 

@@ -58,7 +58,7 @@
         <div class="col-md-7">
             <div class="container">
                 <div class="row">
-                    <select name="selectSection" id="selectSection" class="mb-4 p-4 w-100" onchange="checkValid(0);" disabled>
+                    <select name="selectSection" id="selectSection" class="mb-4 w-100" onchange="checkValid(0);" disabled>
                         <option>Select Section</option>
                     </select>
                 </div>

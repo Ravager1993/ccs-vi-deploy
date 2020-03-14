@@ -6,30 +6,28 @@
                 <button class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <form method="post" action="/deleteTeacher">
+                <form method="post" action="{{ route('deleteTeacher') }}">
                     @csrf
                     <div class="form-group row">
                         <div class="col-12">
-                            <input 
-                                type="button" 
-                                value="Cancel" 
-                                name="cancel" 
-                                id="cancel" 
-                                class="btn btn-success" 
-                                data-dismiss="modal"
-                            >
-                            <input 
-                                type="button" 
-                                value="Delete" 
-                                name="delete" 
-                                id="delete" 
-                                class="btn btn-danger" 
-                                data-dismiss="modal"
-                            >
+                            <input type="hidden" name="deleteID" id="deleteID" value="">
+                            <button type="button" class="btn btn-success" id="cancel" name="cancel" data-dismiss="modal">
+                                Cancel
+                            </button>
+                            <button type="submit" class="btn btn-danger" id="delete" name="delete">
+                                Delete
+                            </button>
                         </div>
+                        
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function deleteTeacher(x) {
+        document.getElementById('deleteID').value = x;
+    }
+</script>
