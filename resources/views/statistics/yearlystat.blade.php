@@ -70,7 +70,7 @@
                                 @endfor
                             </select>
                             <input type="button" id="update" value="update">
-                        </div>
+                    </div>
                     <div class="body isResizable">
                         <div class="container-fluid chart-containter">
                             <canvas id="chart" height="256"></canvas>
@@ -199,72 +199,75 @@ document.getElementById("update").addEventListener("click", function(){
     var fr=document.getElementById('datefr').value;
     var to=document.getElementById('dateto').value;
     var i;
-    var done=false;
+    var ctr=0;
     while(fr<=to){
         done=false;
         for(i=0;i<g1D.length;i++){
-            if(g1D[i]==fr && done==false){
-                console.log(g1D);
-                done=true;
-                addData(window.myLine,fr,g1D.length,0);
+            if(g1D[i]==fr){
+                ctr++;
             }
         }
-        if(!done)
+        if(ctr>0)
+            addData(window.myLine,fr,ctr,0);
+        else
             addData(window.myLine,fr,0,0);
-        done=false;
+
+        ctr=0;
         for(i=0;i<g2D.length;i++){
-            if(g2D[i]==fr && done==false){
-                console.log(g2D);
-                done=true;
-                addData(window.myLine,fr,g2D.length,1);
+            if(g2D[i]==fr){
+                ctr++;
             }
         }
-        if(!done)
+        if(ctr>0)
+            addData(window.myLine,fr,ctr,1);
+        else
             addData(window.myLine,fr,0,1);
-        done=false;
+
+        ctr=0;
         for(i=0;i<g3D.length;i++){
-            console.log(g3D);
-            if(g3D[i]==fr && done==false){
-                console.log(fr);
-                done=true;
-                addData(window.myLine,fr,g3D.length,2);
+            if(g3D[i]==fr){
+                ctr++;
             }
         }
-        if(!done)
+        if(ctr>0)
+            addData(window.myLine,fr,ctr,2);
+        else
             addData(window.myLine,fr,0,2);
-        done=false;
+
+        ctr=0;
         for(i=0;i<g4D.length;i++){
-            console.log(g4D);
-            if(g4D[i]==fr && done==false){
-                console.log(fr);
-                done=true;
-                addData(window.myLine,fr,g4D.length,3);
+            if(g4D[i]==fr){
+                ctr++;
             }
         }
-        if(!done)
+        if(ctr>0)
+            addData(window.myLine,fr,ctr,3);
+        else
             addData(window.myLine,fr,0,3);
-        done=false;
+
+        ctr=0;
         for(i=0;i<g5D.length;i++){
-            console.log(g5D);
-            if(g5D[i]==fr && done==false){
-                console.log(fr);
-                done=true;
-                addData(window.myLine,fr,g5D.length,4);
+            if(g5D[i]==fr){
+                ctr++;
             }
         }
-        if(!done)
+        if(ctr>0)
+            addData(window.myLine,fr,ctr,4);
+        else
             addData(window.myLine,fr,0,4);
-        done=false;
+
+        ctr=0;
         for(i=0;i<g6D.length;i++){
-            console.log(g6D);
-            if(g6D[i]==fr && done==false){
-                console.log(fr);
-                done=true;
-                addData(window.myLine,fr,g6D.length,5);
+            if(g6D[i]==fr){
+                ctr++;
             }
         }
-        if(!done)
+        if(ctr>0)
+            addData(window.myLine,fr,ctr,5);
+        else
             addData(window.myLine,fr,0,5);
+
+        ctr=0;
         fr++;
     }
 });

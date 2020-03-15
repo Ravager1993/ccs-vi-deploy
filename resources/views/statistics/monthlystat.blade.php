@@ -5,246 +5,87 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 {{-- <script src="{{ asset('js/chart.js') }}"></script> --}}
 <script>
-    var g1M1=0;
-    var g1M2=0;
-    var g1M3=0;
-    var g1M4=0;
-    var g1M5=0;
-    var g1M6=0;
-    var g1M7=0;
-    var g1M8=0;
-    var g1M9=0;
-    var g1M10=0;
-    var g1M11=0;
-    var g1M12=0;
+var d = new Date();
+var month = new Array();
+month[0] = "Jan";
+month[1] = "Feb";
+month[2] = "Mar";
+month[3] = "Apr";
+month[4] = "May";
+month[5] = "Jun";
+month[6] = "Jul";
+month[7] = "Aug";
+month[8] = "Sep";
+month[9] = "Oct";
+month[10] = "Nov";
+month[11] = "Dec";
+var m = month[d.getMonth()];
 
-    var g2M1=0;
-    var g2M2=0;
-    var g2M3=0;
-    var g2M4=0;
-    var g2M5=0;
-    var g2M6=0;
-    var g2M7=0;
-    var g2M8=0;
-    var g2M9=0;
-    var g2M10=0;
-    var g2M11=0;
-    var g2M12=0;
+    var g1D=[];
+    g1D[0]=new Array;
+    g1D[1]=new Array;
+    g1D[2]=new Array;
 
-    var g3M1=0;
-    var g3M2=0;
-    var g3M3=0;
-    var g3M4=0;
-    var g3M5=0;
-    var g3M6=0;
-    var g3M7=0;
-    var g3M8=0;
-    var g3M9=0;
-    var g3M10=0;
-    var g3M11=0;
-    var g3M12=0;
+    var g2D=[];
+    g2D[0]=new Array;
+    g2D[1]=new Array;
+    g2D[2]=new Array;
 
-    var g4M1=0;
-    var g4M2=0;
-    var g4M3=0;
-    var g4M4=0;
-    var g4M5=0;
-    var g4M6=0;
-    var g4M7=0;
-    var g4M8=0;
-    var g4M9=0;
-    var g4M10=0;
-    var g4M11=0;
-    var g4M12=0;
+    var g3D=[];
+    g3D[0]=new Array;
+    g3D[1]=new Array;
+    g3D[2]=new Array;
 
-    var g5M1=0;
-    var g5M2=0;
-    var g5M3=0;
-    var g5M4=0;
-    var g5M5=0;
-    var g5M6=0;
-    var g5M7=0;
-    var g5M8=0;
-    var g5M9=0;
-    var g5M10=0;
-    var g5M11=0;
-    var g5M12=0;
+    var g4D=[];
+    g4D[0]=new Array;
+    g4D[1]=new Array;
+    g4D[2]=new Array;
 
-    var g6M1=0;
-    var g6M2=0;
-    var g6M3=0;
-    var g6M4=0;
-    var g6M5=0;
-    var g6M6=0;
-    var g6M7=0;
-    var g6M8=0;
-    var g6M9=0;
-    var g6M10=0;
-    var g6M11=0;
-    var g6M12=0;
+    var g5D=[];
+    g5D[0]=new Array;
+    g5D[1]=new Array;
+    g5D[2]=new Array;
 
-    function g1Data(d) {
-            if(d==1)
-                g1M1++;
-            else if(d==2)
-                g1M2++;
-            else if(d==3)
-                g1M3++;
-            else if(d==4)
-                g1M4++;
-            else if(d==5)
-                g1M5++;
-            else if(d==6)
-                g1M6++;
-            else if(d==7)
-                g1M7++;
-            else if(d==8)
-                g1M8++;
-            else if(d==9)
-                g1M9++;
-            else if(d==10)
-                g1M10++;
-            else if(d==11)
-                g1M11++;
-            else if(d==12)
-                g1M12++;
+    var g6D=[];
+    g6D[0]=new Array;
+    g6D[1]=new Array;
+    g6D[2]=new Array;
+
+    function g1Data(y,m,d) {
+            g1D[0].push(m);
+            g1D[1].push(y);
+            g1D[2].push(d);
         }
 
-    function g2Data(d) {
-            if(d==1)
-                g2M1++;
-            else if(d==2)
-                g2M2++;
-            else if(d==3)
-                g2M3++;
-            else if(d==4)
-                g2M4++;
-            else if(d==5)
-                g2M5++;
-            else if(d==6)
-                g2M6++;
-            else if(d==7)
-                g2M7++;
-            else if(d==8)
-                g2M8++;
-            else if(d==9)
-                g2M9++;
-            else if(d==10)
-                g2M10++;
-            else if(d==11)
-                g2M11++;
-            else if(d==12)
-                g2M12++;
+    function g2Data(y,m,d) {
+            g2D[0].push(m);
+            g2D[1].push(y);
+            g2D[2].push(d);
         }
 
-    function g3Data(d) {
-            if(d==1)
-                g3M1++;
-            else if(d==2)
-                g3M2++;
-            else if(d==3)
-                g3M3++;
-            else if(d==4)
-                g3M4++;
-            else if(d==5)
-                g3M5++;
-            else if(d==6)
-                g3M6++;
-            else if(d==7)
-                g3M7++;
-            else if(d==8)
-                g3M8++;
-            else if(d==9)
-                g3M9++;
-            else if(d==10)
-                g3M10++;
-            else if(d==11)
-                g3M11++;
-            else if(d==12)
-                g3M12++;
+    function g3Data(y,m,d) {
+            g3D[0].push(m);
+            g3D[1].push(y);
+            g3D[2].push(d);
         }
 
-    function g4Data(d) {
-            if(d==1)
-                g4M1++;
-            else if(d==2)
-                g4M2++;
-            else if(d==3)
-                g4M3++;
-            else if(d==4)
-                g4M4++;
-            else if(d==5)
-                g4M5++;
-            else if(d==6)
-                g4M6++;
-            else if(d==7)
-                g4M7++;
-            else if(d==8)
-                g4M8++;
-            else if(d==9)
-                g4M9++;
-            else if(d==10)
-                g4M10++;
-            else if(d==11)
-                g4M11++;
-            else if(d==12)
-                g4M12++;
+    function g4Data(y,m,d) {
+            g4D[0].push(m);
+            g4D[1].push(y);
+            g4D[2].push(d);
         }
 
-    function g5Data(d) {
-            if(d==1)
-                g5M1++;
-            else if(d==2)
-                g5M2++;
-            else if(d==3)
-                g5M3++;
-            else if(d==4)
-                g5M4++;
-            else if(d==5)
-                g5M5++;
-            else if(d==6)
-                g5M6++;
-            else if(d==7)
-                g5M7++;
-            else if(d==8)
-                g5M8++;
-            else if(d==9)
-                g5M9++;
-            else if(d==10)
-                g5M10++;
-            else if(d==11)
-                g5M11++;
-            else if(d==12)
-                g5M12++;
+    function g5Data(y,m,d) {
+            g5D[0].push(m);
+            g5D[1].push(y);
+            g5D[2].push(d);
         }
 
-    function g6Data(d) {
-            if(d==1)
-                g6M1++;
-            else if(d==2)
-                g6M2++;
-            else if(d==3)
-                g6M3++;
-            else if(d==4)
-                g6M4++;
-            else if(d==5)
-                g6M5++;
-            else if(d==6)
-                g6M6++;
-            else if(d==7)
-                g6M7++;
-            else if(d==8)
-                g6M8++;
-            else if(d==9)
-                g6M9++;
-            else if(d==10)
-                g6M10++;
-            else if(d==11)
-                g6M11++;
-            else if(d==12)
-                g6M12++;
+    function g6Data(y,m,d) {
+            g6D[0].push(m);
+            g6D[1].push(y);
+            g6D[2].push(d);
         }
-
 </script>
     <div class="container">
         <div class="row clearfix">
@@ -259,6 +100,28 @@
                         </div>
    
                     </div>
+                    <div>
+                            <select id="month">
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                            <select id="year">
+                                @for($x=2000;$x<=date('Y');$x++)
+                                    <option>{{$x}}</option>
+                                @endfor
+                            </select>
+                            <input type="button" id="update" value="update">
+                    </div>
                     <div class="body isResizable">
                         <div class="container-fluid chart-containter">
                             <canvas id="chart" height="256"></canvas>
@@ -269,162 +132,24 @@
         </div>
     </div>
     @foreach ($counter as $count)
-        @if(date('Y',strtotime($count['created_at'])) >= date('Y',strtotime('-1 year')))
-            @if (($count['grade_level']==1) && date('m', strtotime($count['created_at']))==1)
-                <script>g1Data(1);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==2)
-                <script>g1Data(2);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==3)
-                <script>g1Data(3);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==4)
-                <script>g1Data(4);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==5)
-                <script>g1Data(5);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==6)
-                <script>g1Data(6);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==7)
-                <script>g1Data(7);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==8)
-                <script>g1Data(8);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==9)
-                <script>g1Data(9);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==10)
-                <script>g1Data(10);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==11)
-                <script>g1Data(11);</script>
-            @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==12)
-                <script>g1Data(12);</script>    
-            @endif
+        @if (($count['grade_level']==1))
+            <script>g1Data({{ date('Y',strtotime($count['created_at'])) }},{{ date('m',strtotime($count['created_at'])) }},{{ date('j',strtotime($count['created_at'])) }});</script>
 
-            @if (($count['grade_level']==2) && date('m', strtotime($count['created_at']))==1)
-                <script>g2Data(1);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==2)
-                <script>g2Data(2);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==3)
-                <script>g2Data(3);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==4)
-                <script>g2Data(4);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==5)
-                <script>g2Data(5);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==6)
-                <script>g2Data(6);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==7)
-                <script>g2Data(7);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==8)
-                <script>g2Data(8);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==9)
-                <script>g2Data(9);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==10)
-                <script>g2Data(10);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==11)
-                <script>g2Data(11);</script>
-            @elseif(($count['grade_level']==2) && date('m', strtotime($count['created_at']))==12)
-                <script>g2Data(12);</script>    
-            @endif
+        @elseif (($count['grade_level']==2))
+            <script>g2Data({{ date('Y',strtotime($count['created_at'])) }},{{ date('m',strtotime($count['created_at'])) }},{{ date('j',strtotime($count['created_at'])) }});</script>
 
-            @if (($count['grade_level']==3) && date('m', strtotime($count['created_at']))==1)
-                <script>g3Data(1);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==2)
-                <script>g3Data(2);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==3)
-                <script>g3Data(3);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==4)
-                <script>g3Data(4);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==5)
-                <script>g3Data(5);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==6)
-                <script>g3Data(6);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==7)
-                <script>g3Data(7);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==8)
-                <script>g3Data(8);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==9)
-                <script>g3Data(9);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==10)
-                <script>g3Data(10);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==11)
-                <script>g3Data(11);</script>
-            @elseif(($count['grade_level']==3) && date('m', strtotime($count['created_at']))==12)
-                <script>g3Data(12);</script>    
-            @endif
+        @elseif (($count['grade_level']==3))
+            <script>g3Data({{ date('Y',strtotime($count['created_at'])) }},{{ date('m',strtotime($count['created_at'])) }},{{ date('j',strtotime($count['created_at'])) }});</script>
 
-            @if (($count['grade_level']==4) && date('m', strtotime($count['created_at']))==1)
-                <script>g4Data(1);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==2)
-                <script>g4Data(2);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==3)
-                <script>g4Data(3);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==4)
-                <script>g4Data(4);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==5)
-                <script>g4Data(5);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==6)
-                <script>g4Data(6);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==7)
-                <script>g4Data(7);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==8)
-                <script>g4Data(8);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==9)
-                <script>g4Data(9);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==10)
-                <script>g4Data(10);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==11)
-                <script>g4Data(11);</script>
-            @elseif(($count['grade_level']==4) && date('m', strtotime($count['created_at']))==12)
-                <script>g4Data(12);</script>    
-            @endif
+        @elseif (($count['grade_level']==4))
+            <script>g4Data({{ date('Y',strtotime($count['created_at'])) }},{{ date('m',strtotime($count['created_at'])) }},{{ date('j',strtotime($count['created_at'])) }});</script>
 
-            @if (($count['grade_level']==5) && date('m', strtotime($count['created_at']))==1)
-                <script>g5Data(1);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==2)
-                <script>g5Data(2);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==3)
-                <script>g5Data(3);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==4)
-                <script>g5Data(4);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==5)
-                <script>g5Data(5);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==6)
-                <script>g5Data(6);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==7)
-                <script>g5Data(7);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==8)
-                <script>g5Data(8);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==9)
-                <script>g5Data(9);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==10)
-                <script>g5Data(10);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==11)
-                <script>g5Data(11);</script>
-            @elseif(($count['grade_level']==5) && date('m', strtotime($count['created_at']))==12)
-                <script>g5Data(12);</script>    
-            @endif
+        @elseif (($count['grade_level']==5))
+            <script>g5Data({{ date('Y',strtotime($count['created_at'])) }},{{ date('m',strtotime($count['created_at'])) }},{{ date('j',strtotime($count['created_at'])) }});</script>
 
-            @if (($count['grade_level']==6) && date('m', strtotime($count['created_at']))==1)
-                <script>g6Data(1);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==2)
-                <script>g6Data(2);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==3)
-                <script>g6Data(3);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==4)
-                <script>g6Data(4);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==5)
-                <script>g6Data(5);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==6)
-                <script>g6Data(6);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==7)
-                <script>g6Data(7);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==8)
-                <script>g6Data(8);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==9)
-                <script>g6Data(9);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==10)
-                <script>g6Data(10);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==11)
-                <script>g6Data(11);</script>
-            @elseif(($count['grade_level']==6) && date('m', strtotime($count['created_at']))==12)
-                <script>g6Data(12);</script>    
-            @endif
+        @elseif (($count['grade_level']==6))
+            <script>g6Data({{ date('Y',strtotime($count['created_at'])) }},{{ date('m',strtotime($count['created_at'])) }},{{ date('j',strtotime($count['created_at'])) }});</script>
+
         @endif
     @endforeach
     <span id="test"></span>
@@ -433,7 +158,7 @@
         var config = {
     type: 'line',
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        labels: [],
         datasets: [
             {
             label: "Grade 1",
@@ -443,20 +168,7 @@
             lineTension: 0,
             borderWidth: 1,
             // borderDash: [2, 2],
-            data: [
-                g1M1,
-                g1M2,
-                g1M3,
-                g1M4,
-                g1M5,
-                g1M6,
-                g1M7,
-                g1M8,
-                g1M9,
-                g1M10,
-                g1M11,
-                g1M12
-            ],
+            data: [],
         }, {
             label: "Grade 2",
             fill: false,
@@ -465,20 +177,7 @@
             lineTension: 0,
             borderWidth: 1,
             borderDash: [4, 1],
-            data: [
-                g2M1,
-                g2M2,
-                g2M3,
-                g2M4,
-                g2M5,
-                g2M6,
-                g2M7,
-                g2M8,
-                g2M9,
-                g2M10,
-                g2M11,
-                g2M12
-            ],
+            data: [],
         }, {
             label: "Grade 3",
             backgroundColor: window.chartColors.yellow,
@@ -486,20 +185,7 @@
             lineTension: 0,
             borderWidth: 1,
             borderDash: [8, 1],
-            data: [
-                g3M1,
-                g3M2,
-                g3M3,
-                g3M4,
-                g3M5,
-                g3M6,
-                g3M7,
-                g3M8,
-                g3M9,
-                g3M10,
-                g3M11,
-                g3M12
-            ],
+            data: [],
             fill: false,
         }, {
             label: "Grade 4",
@@ -508,20 +194,7 @@
             lineTension: 0,
             borderWidth: 1,
             borderDash: [8, 1],
-            data: [
-                g4M1,
-                g4M2,
-                g4M3,
-                g4M4,
-                g4M5,
-                g4M6,
-                g4M7,
-                g4M8,
-                g4M9,
-                g4M10,
-                g4M11,
-                g4M12
-            ],
+            data: [],
             fill: false,
         }, {
             label: "Grade 5",
@@ -530,20 +203,7 @@
             lineTension: 0,
             borderWidth: 1,
             borderDash: [8, 1],
-            data: [
-                g5M1,
-                g5M2,
-                g5M3,
-                g5M4,
-                g5M5,
-                g5M6,
-                g5M7,
-                g5M8,
-                g5M9,
-                g5M10,
-                g5M11,
-                g5M12
-            ],
+            data: [],
             fill: false,
         }, {
             label: "Grade 6",
@@ -552,20 +212,7 @@
             lineTension: 0,
             borderWidth: 1,
             borderDash: [8, 1],
-            data: [
-                g6M1,
-                g6M2,
-                g6M3,
-                g6M4,
-                g6M5,
-                g6M6,
-                g6M7,
-                g6M8,
-                g6M9,
-                g6M10,
-                g6M11,
-                g6M12
-            ],
+            data: [],
             fill: false,
         }
     ]
@@ -598,5 +245,127 @@
         }
     }
 };
+
+document.getElementById("update").addEventListener("click", function(){
+    removeData(window.myLine);
+    var yr=document.getElementById('year').value;
+    var mo=month[parseInt(document.getElementById('month').value)-1];
+    var mn=document.getElementById('month').value;
+    var date;
+    var i;
+    var days=0;
+    var ctr=0;
+    while(days<=daysInMonth(mn,yr)){
+        done=false;
+        date=mo+"-"+days;
+        ctr=0;
+        for(i=0;i<g1D[0].length;i++){
+            if(g1D[0][i]==mn && g1D[1][i]==yr && g1D[2][i]==days){
+                ctr++;
+            }
+        }
+        if(ctr>0)
+            addData(window.myLine,date,ctr,0);
+        else
+            addData(window.myLine,date,0,0);
+
+        ctr=0;
+        for(i=0;i<g2D[0].length;i++){
+            if(g2D[0][i]==mn && g2D[1][i]==yr && g2D[2][i]==days){
+                ctr++;
+            }
+        }
+        if(ctr>0)
+            addData(window.myLine,date,ctr,1);
+        else
+            addData(window.myLine,date,0,1);
+
+        ctr=0;
+        for(i=0;i<g3D[0].length;i++){
+            if(g3D[0][i]==mn && g3D[1][i]==yr && g3D[2][i]==days){
+                ctr++;
+            }
+        }
+        if(ctr>0)
+            addData(window.myLine,date,ctr,2);
+        else
+            addData(window.myLine,date,0,2);
+
+        ctr=0;
+        for(i=0;i<g4D[0].length;i++){
+            if(g4D[0][i]==mn && g4D[1][i]==yr && g4D[2][i]==days){
+                ctr++;
+            }
+        }
+        if(ctr>0)
+            addData(window.myLine,date,ctr,3);
+        else
+            addData(window.myLine,date,0,3);
+
+        ctr=0;
+        for(i=0;i<g5D[0].length;i++){
+            if(g5D[0][i]==mn && g5D[1][i]==yr && g5D[2][i]==days){
+                ctr++;
+            }
+        }
+        if(ctr>0)
+            addData(window.myLine,date,ctr,4);
+        else
+            addData(window.myLine,date,0,4);
+
+        ctr=0;
+        for(i=0;i<g6D[0].length;i++){
+            if(g6D[0][i]==mn && g6D[1][i]==yr && g6D[2][i]==days){
+                ctr++;
+            }
+        }
+        if(ctr>0)
+            addData(window.myLine,date,ctr,5);
+        else
+            addData(window.myLine,date,0,5);
+
+        days++;
+    }
+});
+// function updateChart(){
+//     var fr=document.getElementById('datefr').value;
+//     var to=document.getElementById('dateto').value;
+//     var i;
+//     addData(config[],'2000','55');
+//     while(fr<=to){
+//         for(i=0;g1D[i]!=null;i++){
+//             if(g1D[i]==fr)
+//                 addData(config,'2000','55');
+//         }
+//         fr++;
+//     }
+// }
+
+function daysInMonth (month, year) { 
+                return new Date(year, month, 0).getDate(); 
+            }
+
+function addData(chart, label, data, i) {
+    var j;
+    var labelExist=false;
+    for(j=0;j<chart.data.labels.length;j++){
+        if(label==chart.data.labels[j])
+            labelExist=true;
+    }
+    if(!labelExist)
+        chart.data.labels.push(label);
+    chart.data.datasets[i].data.push(data);
+    // chart.data.datasets.forEach(('Grade 1',1,dataset) => {
+    //     dataset.data.push(data);
+    // });
+    chart.update();
+}
+
+function removeData(chart) {
+    chart.data.labels = [];
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data = [];
+    });
+}
     </script>
 @endsection
