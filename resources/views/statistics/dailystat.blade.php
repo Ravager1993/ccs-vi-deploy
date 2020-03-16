@@ -5,22 +5,6 @@
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script> --}}
 {{-- <script src="{{ asset('js/chart.js') }}"></script> --}}
 <script>
-    var d = new Date();
-    var month = new Array();
-    month[0] = "Jan";
-    month[1] = "Feb";
-    month[2] = "Mar";
-    month[3] = "Apr";
-    month[4] = "May";
-    month[5] = "Jun";
-    month[6] = "Jul";
-    month[7] = "Aug";
-    month[8] = "Sep";
-    month[9] = "Oct";
-    month[10] = "Nov";
-    month[11] = "Dec";
-    var m = month[d.getMonth()];
-
         var g1D=[];
         g1D[0]=new Array;
         g1D[1]=new Array;
@@ -369,7 +353,6 @@ function addData(chart, label, data, i) {
 
 function removeData(chart) {
     chart.data.labels = [];
-    console.log(chart.data.labels);
     chart.data.datasets.forEach((dataset) => {
         dataset.data = [];
     });

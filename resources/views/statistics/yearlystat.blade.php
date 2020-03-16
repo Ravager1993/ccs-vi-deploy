@@ -303,7 +303,6 @@ function addData(chart, label, data, i) {
 
 function removeData(chart) {
     chart.data.labels = [];
-    console.log(chart.data.labels);
     chart.data.datasets.forEach((dataset) => {
         dataset.data = [];
     });

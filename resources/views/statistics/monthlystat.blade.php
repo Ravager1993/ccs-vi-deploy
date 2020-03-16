@@ -253,7 +253,7 @@ document.getElementById("update").addEventListener("click", function(){
     var mn=document.getElementById('month').value;
     var date;
     var i;
-    var days=0;
+    var days=1;
     var ctr=0;
     while(days<=daysInMonth(mn,yr)){
         done=false;
