@@ -5,7 +5,8 @@
         </button>
     @endif
     <a class="navbar-brand ml-4" href="{{ url('/') }}">
-        {{ config('app.name', 'LibStats') }}
+        {{-- {{ config('app.name', 'LibStats') }} --}}
+        @yield('header')
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
         <span class="navbar-toggler-icon"></span>

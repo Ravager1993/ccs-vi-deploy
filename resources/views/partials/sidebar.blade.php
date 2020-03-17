@@ -4,8 +4,13 @@
                 </div>
 
                 <div class="sidebar-header">
-                    <h3>LOGO</h3>
+                    {{-- <h3>LOGO</h3> --}}
+                    <a class="navbar-brand ml-4" href="{{ url('/home') }}">
+                        {{ config('app.name', 'LibStats') }}
+                    </a>
+                    
                 </div>
+                
 
                 <ul class="list-unstyled components">
                     {{-- <p>User Info</p> --}}

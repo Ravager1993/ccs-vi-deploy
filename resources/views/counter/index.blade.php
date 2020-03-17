@@ -1,9 +1,8 @@
 @extends('layouts.app')
+@section('header', 'Counter')
 @section('content')
 <div class="container counter-page">
-    <h2>Counter</h2>
     @include('partials.formerrors')
-    
     <form action="{{ route('counterSubmit') }}" method="post">
         @csrf
         <div class="row">

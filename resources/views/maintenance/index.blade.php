@@ -1,10 +1,10 @@
 @extends('layouts.app')
+@section('header', 'Maintenance')
 @section('content')
 
 @if(Auth::check())
 <div class="container maintenance-page">
     @include('partials.formerrors')
-    <h2>Maintenace</h2>
     <div class="row">
         <div class="col-sm-12">
             <div class="card p-4">
