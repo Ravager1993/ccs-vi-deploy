@@ -59,11 +59,13 @@
    
                     </div>
                     <div>
+                            from: 
                             <select id="datefr">
                                 @for($x=2000;$x<=date('Y');$x++)
                                     <option>{{$x}}</option>
                                 @endfor
                             </select>
+                            to: 
                             <select id="dateto">
                                 @for($y=2000;$y<=date('Y');$y++)
                                     <option>{{$y}}</option>
