@@ -5,6 +5,13 @@
 
 @section('content')
 <script>
+    var g1D=0;
+    var g2D=0;
+    var g3D=0;
+    var g4D=0;
+    var g5D=0;
+    var g6D=0;
+
     var ind;
 
     var g1M=new Array();
@@ -354,8 +361,9 @@
         <script>addData();</script>
     @endforeach  --}}
 </div>
+{{-- for monthly data --}}
 @foreach ($counter as $count)
-        @if(date('Y',strtotime($count['created_at'])) >= date('Y',strtotime('-1 year')))
+        @if(date('Y',strtotime($count['created_at'])) == date('Y'))
             @if (($count['grade_level']==1) && date('m', strtotime($count['created_at']))==1)
                 <script>g1Data(1);</script>
             @elseif(($count['grade_level']==1) && date('m', strtotime($count['created_at']))==2)
@@ -513,6 +521,29 @@
             @endif
         @endif
     @endforeach
+
+    {{-- for daily data (pie chart) --}}
+    @foreach ($counter as $count)
+         @if (($count['grade_level']==1) && date('Y-m-d',strtotime($count['created_at']))==date('Y-m-d'))
+            <script>g1D++;</script>
+
+        @elseif (($count['grade_level']==2) && date('Y-m-d',strtotime($count['created_at']))==date('Y-m-d'))
+            <script>g2D++;</script>
+
+        @elseif (($count['grade_level']==3) && date('Y-m-d',strtotime($count['created_at']))==date('Y-m-d'))
+            <script>g3D++</script>
+
+        @elseif (($count['grade_level']==4) && date('Y-m-d',strtotime($count['created_at']))==date('Y-m-d'))
+            <script>g4D++</script>
+
+        @elseif (($count['grade_level']==5) && date('Y-m-d',strtotime($count['created_at']))==date('Y-m-d'))
+            <script>g5D++</script>
+
+        @elseif (($count['grade_level']==6) && date('Y-m-d',strtotime($count['created_at']))==date('Y-m-d'))
+            <script>g6D++</script>
+
+        @endif
+    @endforeach
 <script>
     var ctx = document.getElementById("chart").getContext("2d");
     var myLineChart = new Chart(ctx, {
@@ -619,7 +650,7 @@ var myChart = new Chart(ctx, {
         labels: ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6'],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [g1D, g2D, g3D, g4D, g5D, g6D],
             backgroundColor: [
               '#0088FF',
               '#FFAA00',
@@ -707,6 +738,7 @@ for(i=0;i<12;i++){
     addData(myLineChart,months[i],g5M[i],4);
     addData(myLineChart,months[i],g6M[i],5);
 }
+
 function addData(chart, label, data, i) {
     var j;
     var labelExist=false;
