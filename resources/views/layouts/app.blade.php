@@ -13,14 +13,17 @@
     <script src="{{ asset('/public/js/app.js') }}"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
     <link rel="stylesheet" href="{{ asset('/public/css/fontawesome.css')}}">
-    <link href="{{ asset('/public/css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('/public/css/style.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/public/css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('/public/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/public/css/calendar.css') }}">
+
     <script src="{{ asset('/public/js/fontawesome.js') }}"></script>
-    <script src="{{ asset('/public/js/chart.js') }} "></script>
+    <script src="{{ asset('/public/js/chart.js') }}"></script>
     <script src="{{ asset('/public/js/jquery.js') }}"></script>
     <script src="{{ asset('/public/js/script.js') }}"></script>
+    <script src="{{ asset('/public/js/calendar.js') }}"></script>
 
 
     @if(Auth::check() == 0)

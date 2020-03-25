@@ -17,11 +17,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/student', 'StudentController@index')->name('student');
+// Route::get('/student', 'StudentController@index')->name('student');
 Route::post('/studentSubmit', 'StudentController@submit')->name('studentSubmit');
 Route::post('/counterCount', 'CounterController@submit')->name('counterSubmit');
 
 Route::get('/maintenance', 'MaintenanceController@index')->name('maintenance');
+Route::post('/addTeacher', 'MaintenanceController@insert')->name('addTeacher');
+Route::post('/deleteTeacher', 'MaintenanceController@delete')->name('deleteTeacher');
+Route::post('/updateTeacher', 'MaintenanceController@update')->name('updateTeacher');
 
 Route::get('/dailystat', 'StatisticController@daily')->name('dailystat');
 

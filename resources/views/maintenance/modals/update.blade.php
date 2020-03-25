@@ -2,11 +2,13 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4>Add teacher</h4>
+                <h4>Edit teacher</h4>
                 <button class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <form method="post">
+                <form method="post" action="{{ route('updateTeacher') }} ">
+                    @csrf
+                    <input type="hidden" name="updateID" id="updateID">
                     <div class="form-group row">
                         <label for="firstName" class="col-12 col-form-label" autofocus>Firstname</label>
                         <div class="col-12">
@@ -42,14 +44,17 @@
 
                     <div class="form-group row">
                         <div class="col-12">
-                            <input 
+                            <button type="submit" class="btn btn-success" name="update">
+                                Save
+                            </button>
+                            {{-- <input 
                             type="submit" 
                             value="Submit" 
                             name="insert" 
                             id="insert" 
                             class="btn btn-success" 
                             data-dismiss="modal"
-                        >
+                        > --}}
                         </div>
                     </div>
                 </form>
@@ -57,3 +62,13 @@
         </div>
     </div>
 </div>
+<script>
+    function updateTeacher(id, fn, ln, gl, sc) {
+        document.getElementById('updateID').value = id;
+        document.getElementById('firstName').value = fn;
+        document.getElementById('lastName').value = ln;
+        document.getElementById('gradeLevel').value = gl;
+        document.getElementById('section').value = sc;
+        console.log("hahahah");
+    }
+</script>

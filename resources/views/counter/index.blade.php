@@ -1,9 +1,8 @@
 @extends('layouts.app')
+@section('header', 'Counter')
 @section('content')
 <div class="container counter-page">
-    <h2>Counter</h2>
     @include('partials.formerrors')
-    
     <form action="{{ route('counterSubmit') }}" method="post">
         @csrf
         <div class="row">
@@ -58,7 +57,7 @@
         <div class="col-md-7">
             <div class="container">
                 <div class="row">
-                    <select name="selectSection" id="selectSection" class="mb-4 p-4 w-100" onchange="checkValid(0);" disabled>
+                    <select name="selectSection" id="selectSection" class="mb-4 w-100" onchange="checkValid(0);" disabled>
                         <option>Select Section</option>
                     </select>
                 </div>

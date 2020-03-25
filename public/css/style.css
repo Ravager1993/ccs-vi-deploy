@@ -564,6 +564,9 @@ a.user-drop[aria-expanded="true"] {
     border-radius: 8px;
     -webkit-appearance: none;
     appearance: none;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 20px;
 }
 .counter-page input[type="submit"] {
     padding: 0 100px;
@@ -592,6 +595,17 @@ a.user-drop[aria-expanded="true"] {
 
 
 
+.btn-icon {
+    /* background-image: url("../img/icons-12.png"); */
+    background-size: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 16px;;
+    height: 16px;
+
+}
+
+
 
 #footer {
     margin-top: 24px;
@@ -602,4 +616,19 @@ a.user-drop[aria-expanded="true"] {
 }
 #footer p {
     line-height: 70px;
+}
+
+
+
+.alert-style {
+    top: 10%;
+    position: absolute;
+    background-color: white;
+    transform: translateX(-50%);
+    padding: 20px;
+    left: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    border: 1px solid #888;
+    z-index: 999;
 }

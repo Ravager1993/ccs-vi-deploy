@@ -47,7 +47,7 @@ class HomeController extends Controller
                 'daily' => count($daily),
                 'monthly' => count($monthly),
                 'yearly' => count($yearly),
-            ],
+            ]
         );
     }
 }

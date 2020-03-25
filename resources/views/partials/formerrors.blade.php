@@ -30,10 +30,7 @@
 @endif
 
 @if (session('status'))
-    <div class="alert alert-success">
-        {{ session('status') }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+    <script>
+        tempAlert('{{ session('status') }}', 3000);
+    </script>
 @endif
