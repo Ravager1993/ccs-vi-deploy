@@ -94,7 +94,7 @@
                 <div class="content">
                     <div class="text">Weekly AVG</div>
                     <div class="number count-to" data-from="0" data-to="257">
-                        {{ $yearly }}
+                        {{ number_format($weekly/7) }}
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                 <div class="content">
                     <div class="text">Monthly AVG</div>
                     <div class="number count-to" data-from="0" data-to="243">
-                        {{ $monthly }}
+                        {{ number_format($monthly/date('t')) }}
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@
                 <div class="content">
                     <div class="text">Yearly AVG</div>
                     <div class="number count-to" data-from="0" data-to="1225">
-                        {{ $yearly }}
+                        {{ number_format($yearly/365) }}
                     </div>
                 </div>
             </div>
@@ -228,7 +228,7 @@
                         </div>
                         <div class="student-total number">
                             <ul>
-                                <li>34</li>
+                                <li>{{ $daily }}</li>
                             </ul>
                         </div>
                     </div>
@@ -238,7 +238,7 @@
                         </div>
                         <div class="student-total number">
                             <ul>
-                                <li>85</li>
+                            <li>{{ $yday }}</li>
                             </ul>
                         </div>
                     </div>
@@ -248,7 +248,7 @@
                         </div>
                         <div class="student-total number">
                             <ul>
-                                <li>453</li>
+                                <li>{{ $weekly }}</li>
                             </ul>
                         </div>
                     </div>
@@ -266,12 +266,21 @@
                         </div>
                         <div class="student-total number">
                             <ul>
-                                <li>Grade 4</li>
-                                <li>Grade 3</li>
-                                <li>Grade 6</li>
-                                <li>Grade 2</li>
-                                <li>Grade 1</li>
-                                <li>Grade 5</li>
+                                @if(max($g1t,$g2t,$g3t,$g4t,$g5t,$g6t)==0)
+                                    <li>Empty</li>
+                                @elseif(max($g1t,$g2t,$g3t,$g4t,$g5t,$g6t)==$g1t)
+                                    <li>Grade 1</li>
+                                @elseif(max($g1t,$g2t,$g3t,$g4t,$g5t,$g6t)==$g2t)
+                                    <li>Grade 2</li>
+                                @elseif(max($g1t,$g2t,$g3t,$g4t,$g5t,$g6t)==$g3t)
+                                    <li>Grade 3</li>
+                                @elseif(max($g1t,$g2t,$g3t,$g4t,$g5t,$g6t)==$g4t)
+                                    <li>Grade 4</li>
+                                @elseif(max($g1t,$g2t,$g3t,$g4t,$g5t,$g6t)==$g5t)
+                                    <li>Grade 5</li>
+                                @elseif(max($g1t,$g2t,$g3t,$g4t,$g5t,$g6t)==$g6t)
+                                    <li>Grade 6</li>
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -281,12 +290,21 @@
                         </div>
                         <div class="student-total number">
                             <ul>
-                                <li>Grade 1</li>
-                                <li>Grade 2</li>
-                                <li>Grade 3</li>
-                                <li>Grade 4</li>
-                                <li>Grade 5</li>
-                                <li>Grade 6</li>
+                                @if(max($g1y,$g2y,$g3y,$g4y,$g5y,$g6y)==0)
+                                    <li>Empty</li>
+                                @elseif(max($g1y,$g2y,$g3y,$g4y,$g5y,$g6y)==$g1y)
+                                    <li>Grade 1</li>
+                                @elseif(max($g1y,$g2y,$g3y,$g4y,$g5y,$g6y)==$g2y)
+                                    <li>Grade 2</li>
+                                @elseif(max($g1y,$g2y,$g3y,$g4y,$g5y,$g6y)==$g3y)
+                                    <li>Grade 3</li>
+                                @elseif(max($g1y,$g2y,$g3y,$g4y,$g5y,$g6y)==$g4y)
+                                    <li>Grade 4</li>
+                                @elseif(max($g1y,$g2y,$g3y,$g4y,$g5y,$g6y)==$g5y)
+                                    <li>Grade 5</li>
+                                @elseif(max($g1y,$g2y,$g3y,$g4y,$g5y,$g6y)==$g6y)
+                                    <li>Grade 6</li>
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -296,12 +314,21 @@
                         </div>
                         <div class="student-total number">
                             <ul>
-                                <li>Grade 4</li>
-                                <li>Grade 2</li>
-                                <li>Grade 5</li>
-                                <li>Grade 1</li>
-                                <li>Grade 6</li>
-                                <li>Grade 3</li>
+                                @if(max($g1lw,$g2lw,$g3lw,$g4lw,$g5lw,$g6lw)==0)
+                                    <li>Empty</li>
+                                @elseif(max($g1lw,$g2lw,$g3lw,$g4lw,$g5lw,$g6lw)==$g1lw)
+                                    <li>Grade 1</li>
+                                @elseif(max($g1lw,$g2lw,$g3lw,$g4lw,$g5lw,$g6lw)==$g2lw)
+                                    <li>Grade 2</li>
+                                @elseif(max($g1lw,$g2lw,$g3lw,$g4lw,$g5lw,$g6lw)==$g3lw)
+                                    <li>Grade 3</li>
+                                @elseif(max($g1lw,$g2lw,$g3lw,$g4lw,$g5lw,$g6lw)==$g4lw)
+                                    <li>Grade 4</li>
+                                @elseif(max($g1lw,$g2lw,$g3lw,$g4lw,$g5lw,$g6lw)==$g5lw)
+                                    <li>Grade 5</li>
+                                @elseif(max($g1lw,$g2lw,$g3lw,$g4lw,$g5lw,$g6lw)==$g6lw)
+                                    <li>Grade 6</li>
+                                @endif
                             </ul>
                         </div>
                     </div>
