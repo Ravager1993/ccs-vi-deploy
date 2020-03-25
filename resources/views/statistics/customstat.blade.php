@@ -5,6 +5,16 @@
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script> --}}
 {{-- <script src="{{ asset('js/chart.js') }}"></script> --}}
 <script>
+    function setmax(){
+        var max = document.getElementById("dateto").value;
+        document.getElementById("datefr").setAttribute("max",max);
+    }
+
+    function setmin(){
+        var max = document.getElementById("datefr").value;
+        document.getElementById("dateto").setAttribute("min",max);
+    }
+
     var d = new Date();
     var month = new Array();
     month[0] = "Jan";
@@ -113,8 +123,8 @@
    
                     </div>
                     <div>
-                            <input type="date" id="datefr">
-                            <input type="date" id="dateto">
+                            <input type="date" id="datefr" onchange="setmin();">
+                            <input type="date" id="dateto" onchange="setmax();">
                             <input type="button" id="update" value="update">
                     </div>
                     <div class="body isResizable">
@@ -257,7 +267,6 @@
 
 document.getElementById("update").addEventListener("click", function(){
     removeData(window.myLine);
-    console.log("gi");
     var strfr=document.getElementById('datefr').value;
     var strto=document.getElementById('dateto').value;
     var resfr=strfr.replace(/-/g, "/");
@@ -275,7 +284,6 @@ document.getElementById("update").addEventListener("click", function(){
     var ctr=0;
     while(datefr<=dateto){
         done=false;
-        console.log("hi");
         label=month[monthfr-1]+"-"+dayfr;
 
         for(i=0;i<g1D[0].length;i++){
