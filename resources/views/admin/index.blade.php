@@ -346,10 +346,60 @@
                         </div>
                         <div class="student-total number">
                             <ul>
-                                <li>Section D</li>
-                                <li>Section C</li>
-                                <li>Section B</li>
-                                <li>Section A</li>
+                                @if(max($g1t,$g2t,$g3t,$g4t,$g5t,$g6t)==0)
+                                    <li>Empty</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g1ta)
+                                    <li>Grade 1 Section A</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g2ta)
+                                    <li>Grade 2 Section A</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g3ta)
+                                    <li>Grade 3 Section A</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g4ta)
+                                    <li>Grade 4 Section A</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g5ta)
+                                    <li>Grade 5 Section A</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g6ta)
+                                    <li>Grade 6 Section A</li>
+
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g1tb)
+                                    <li>Grade 1 Section B</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g2tb)
+                                    <li>Grade 2 Section B</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g3tb)
+                                    <li>Grade 3 Section B</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g4tb)
+                                    <li>Grade 4 Section B</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g5tb)
+                                    <li>Grade 5 Section B</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g6tb)
+                                    <li>Grade 6 Section B</li>
+
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g1tc)
+                                    <li>Grade 1 Section C</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g2tc)
+                                    <li>Grade 2 Section C</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g3tc)
+                                    <li>Grade 3 Section C</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g4tc)
+                                    <li>Grade 4 Section C</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g5tc)
+                                    <li>Grade 5 Section C</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g6tc)
+                                    <li>Grade 6 Section C</li>
+
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g1td)
+                                    <li>Grade 1 Section D</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g2td)
+                                    <li>Grade 2 Section D</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g3td)
+                                    <li>Grade 3 Section D</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g4td)
+                                    <li>Grade 4 Section D</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g5td)
+                                    <li>Grade 5 Section D</li>
+                                @elseif(max($g1ta,$g2ta,$g3ta,$g4ta,$g5ta,$g6ta,$g1tb,$g2tb,$g3tb,$g4tb,$g5tb,$g6tb,$g1tc,$g2tc,$g3tc,$g4tc,$g5tc,$g6tc,$g1td,$g2td,$g3td,$g4td,$g5td,$g6td)==$g6td)
+                                    <li>Grade 6 Section D</li>
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -359,10 +409,60 @@
                         </div>
                         <div class="student-total number">
                             <ul>
-                                <li>Section A</li>
-                                <li>Section B</li>
-                                <li>Section D</li>
-                                <li>Section C</li>
+                                @if(max($g1t,$g2t,$g3t,$g4t,$g5t,$g6t)==0)
+                                    <li>Empty</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g1ya)
+                                    <li>Grade 1 Section A</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g2ya)
+                                    <li>Grade 2 Section A</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g3ya)
+                                    <li>Grade 3 Section A</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g4ya)
+                                    <li>Grade 4 Section A</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g5ya)
+                                    <li>Grade 5 Section A</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g6ya)
+                                    <li>Grade 6 Section A</li>
+
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g1yb)
+                                    <li>Grade 1 Section B</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g2yb)
+                                    <li>Grade 2 Section B</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g3yb)
+                                    <li>Grade 3 Section B</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g4yb)
+                                    <li>Grade 4 Section B</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g5yb)
+                                    <li>Grade 5 Section B</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g6yb)
+                                    <li>Grade 6 Section B</li>
+
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g1yc)
+                                    <li>Grade 1 Section C</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g2yc)
+                                    <li>Grade 2 Section C</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g3yc)
+                                    <li>Grade 3 Section C</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g4yc)
+                                    <li>Grade 4 Section C</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g5yc)
+                                    <li>Grade 5 Section C</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g6yc)
+                                    <li>Grade 6 Section C</li>
+
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g1yd)
+                                    <li>Grade 1 Section D</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g2yd)
+                                    <li>Grade 2 Section D</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g3yd)
+                                    <li>Grade 3 Section D</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g4yd)
+                                    <li>Grade 4 Section D</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g5yd)
+                                    <li>Grade 5 Section D</li>
+                                @elseif(max($g1ya,$g2ya,$g3ya,$g4ya,$g5ya,$g6ya,$g1yb,$g2yb,$g3yb,$g4yb,$g5yb,$g6yb,$g1yc,$g2yc,$g3yc,$g4yc,$g5yc,$g6yc,$g1yd,$g2yd,$g3yd,$g4yd,$g5yd,$g6yd)==$g6yd)
+                                    <li>Grade 6 Section D</li>
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -372,10 +472,60 @@
                         </div>
                         <div class="student-total number">
                             <ul>
-                                <li>Section B</li>
-                                <li>Section A</li>
-                                <li>Section D</li>
-                                <li>Section C</li>
+                                @if(max($g1lw,$g2lw,$g3lw,$g4lw,$g5lw,$g6lw)==0)
+                                    <li>Empty</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g1lwa)
+                                    <li>Grade 1 Section A</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g2lwa)
+                                    <li>Grade 2 Section A</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g3lwa)
+                                    <li>Grade 3 Section A</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g4lwa)
+                                    <li>Grade 4 Section A</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g5lwa)
+                                    <li>Grade 5 Section A</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g6lwa)
+                                    <li>Grade 6 Section A</li>
+
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g1lwb)
+                                    <li>Grade 1 Section B</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g2lwb)
+                                    <li>Grade 2 Section B</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g3lwb)
+                                    <li>Grade 3 Section B</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g4lwb)
+                                    <li>Grade 4 Section B</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g5lwb)
+                                    <li>Grade 5 Section B</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g6lwb)
+                                    <li>Grade 6 Section B</li>
+
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g1lwc)
+                                    <li>Grade 1 Section C</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g2lwc)
+                                    <li>Grade 2 Section C</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g3lwc)
+                                    <li>Grade 3 Section C</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g4lwc)
+                                    <li>Grade 4 Section C</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g5lwc)
+                                    <li>Grade 5 Section C</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g6lwc)
+                                    <li>Grade 6 Section C</li>
+
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g1lwd)
+                                    <li>Grade 1 Section D</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g2lwd)
+                                    <li>Grade 2 Section D</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g3lwd)
+                                    <li>Grade 3 Section D</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g4lwd)
+                                    <li>Grade 4 Section D</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g5lwd)
+                                    <li>Grade 5 Section D</li>
+                                @elseif(max($g1lwa,$g2lwa,$g3lwa,$g4lwa,$g5lwa,$g6lwa,$g1lwb,$g2lwb,$g3lwb,$g4lwb,$g5lwb,$g6lwb,$g1lwc,$g2lwc,$g3lwc,$g4lwc,$g5lwc,$g6lwc,$g1lwd,$g2lwd,$g3lwd,$g4lwd,$g5lwd,$g6lwd)==$g6lwd)
+                                    <li>Grade 6 Section D</li>
+                                @endif
                             </ul>                            
                         </div>
                     </div>
