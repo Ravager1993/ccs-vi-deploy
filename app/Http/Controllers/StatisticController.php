@@ -45,4 +45,13 @@ class StatisticController extends Controller
 
         //return view('statistic');
     }
+
+    public function custom() {
+        $counter = Counter::all();
+        // $counter = DB::table('counter');
+        return view('statistics.customstat', ['counter' => $counter]);
+        // return view('statistic', compact('g1c'));
+
+        //return view('statistic');
+    }
 }
