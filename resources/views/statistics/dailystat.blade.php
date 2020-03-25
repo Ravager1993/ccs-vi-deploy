@@ -133,6 +133,16 @@
     @endforeach
     <span id="test"></span>
     <script>
+        Date.prototype.toDateInputValue = (function() {
+            var local = new Date(this);
+            local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+            return local.toJSON().slice(0,10);
+        });
+
+        var dt = new Date();
+        document.getElementById("date").value=dt.toDateInputValue();
+        document.getElementById("date").setAttribute("max",dt.toDateInputValue());
+
         console.log(g1D);
         var config = {
     type: 'line',

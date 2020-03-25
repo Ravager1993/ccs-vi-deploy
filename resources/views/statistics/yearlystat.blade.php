@@ -8,6 +8,28 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
+    function opChangefr(){
+        var x = document.getElementById("datefr").value;
+        var op = document.getElementById("dateto").getElementsByTagName("option");
+        for (var i = 0; i < op.length; i++) {
+        // lowercase comparison for case-insensitivity
+        (op[i].value.toLowerCase() < x) 
+            ? op[i].disabled = true
+            : op[i].disabled = false;
+        }
+    }
+
+    function opChangeto(){
+        var x = document.getElementById("dateto").value;
+        var op = document.getElementById("datefr").getElementsByTagName("option");
+        for (var i = 0; i < op.length; i++) {
+        // lowercase comparison for case-insensitivity
+        (op[i].value.toLowerCase() > x) 
+            ? op[i].disabled = true
+            : op[i].disabled = false;
+        }
+    }
+
     var g1D=[];
 
     var g2D=[];
@@ -60,14 +82,14 @@
                     </div>
                     <div>
                             from: 
-                            <select id="datefr">
-                                @for($x=2000;$x<=date('Y');$x++)
+                            <select id="datefr" onchange="opChangefr();">
+                                @for($x=2018;$x<=date('Y');$x++)
                                     <option>{{$x}}</option>
                                 @endfor
                             </select>
                             to: 
-                            <select id="dateto">
-                                @for($y=2000;$y<=date('Y');$y++)
+                            <select id="dateto" onchange="opChangeto();">
+                                @for($y=2018;$y<=date('Y');$y++)
                                     <option>{{$y}}</option>
                                 @endfor
                             </select>
@@ -104,7 +126,9 @@
         @endif
     @endforeach
     <script>
-        
+        var dt = new Date();
+        document.getElementById("datefr").value=dt.getFullYear();
+        document.getElementById("dateto").value=dt.getFullYear();
         var config = {
     type: 'line',
     data: {
@@ -309,5 +333,7 @@ function removeData(chart) {
         dataset.data = [];
     });
 }
+
+
     </script>
 @endsection

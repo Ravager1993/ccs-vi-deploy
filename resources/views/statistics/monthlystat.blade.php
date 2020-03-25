@@ -116,7 +116,7 @@ var m = month[d.getMonth()];
                                 <option value="12">December</option>
                             </select>
                             <select id="year">
-                                @for($x=2000;$x<=date('Y');$x++)
+                                @for($x=2018;$x<=date('Y');$x++)
                                     <option>{{$x}}</option>
                                 @endfor
                             </select>
@@ -155,6 +155,13 @@ var m = month[d.getMonth()];
     <span id="test"></span>
     <script>
         
+        var dt = new Date();
+        if(dt.getMonth()==11)
+            document.getElementById("month").value=dt.getMonth()-11;
+        else
+            document.getElementById("month").value=dt.getMonth()+1;
+        document.getElementById("year").value=dt.getFullYear();
+
         var config = {
     type: 'line',
     data: {

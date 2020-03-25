@@ -139,8 +139,8 @@ dayOfWeek[6] = "Sat";
                                 <option>4</option>
                             </select>
                             Year: 
-                            <select id="year">
-                                @for($x=2000;$x<=date('Y');$x++)
+                        <select id="year">
+                                @for($x=2018;$x<=date('Y');$x++)
                                     <option>{{$x}}</option>
                                 @endfor
                             </select>
@@ -178,7 +178,13 @@ dayOfWeek[6] = "Sat";
     @endforeach
     <span id="test"></span>
     <script>
-        
+        var dt = new Date();
+        if(dt.getMonth()==11)
+            document.getElementById("month").value=dt.getMonth()-11;
+        else
+            document.getElementById("month").value=dt.getMonth()+1;
+        document.getElementById("year").value=dt.getFullYear();
+    
         var config = {
     type: 'line',
     data: {
