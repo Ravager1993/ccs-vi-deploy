@@ -203,7 +203,7 @@
                 <div class="container-fluid header">
                     <div class="row clearfix">
                         <div class="col-xs-12 col-sm-6">
-                            <h6>History</h6>
+                            <h6>Visits Per Month of Current Year</h6>
                         </div>
                     </div>
                 </div>
@@ -620,7 +620,7 @@
             // position: 'bottom',
             display: true,
             // text: 'Statistics'
-            text: 'HELLO'
+            text: 'Grade level'
         },
         tooltips: {
             mode: 'index',
