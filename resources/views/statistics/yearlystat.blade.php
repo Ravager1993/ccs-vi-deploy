@@ -74,7 +74,7 @@
                     <div class="container-fluid header">
                         <div class="row clearfix">
                             <div class="col-xs-12 col-sm-6">
-                                <h4>History</h4>
+                                <h4>Visits By Year</h4>
                             </div>
   
                         </div>
