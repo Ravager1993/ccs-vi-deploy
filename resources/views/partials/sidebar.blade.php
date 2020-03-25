@@ -27,6 +27,9 @@
                         </a>
                         <ul class="collapse list-unstyled" id="subStatistics">
                             <li>
+                                <a href="{{ route('customstat') }}">Custom</a>
+                            </li>
+                            <li>
                                 <a href="{{ route('dailystat') }}">Daily</a>
                             </li>
                             <li>
