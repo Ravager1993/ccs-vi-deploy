@@ -632,3 +632,16 @@ a.user-drop[aria-expanded="true"] {
     border: 1px solid #888;
     z-index: 999;
 }
+
+.statistics .chart-label {
+    font-size: 18px;
+    color: #444;
+}
+.statistics .date-input input[type="date"],
+.statistics .date-input select {
+    border: 2px solid #444;
+    outline: none;
+    padding: 4px;
+    border-radius: 4px;
+
+}

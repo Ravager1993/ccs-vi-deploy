@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('header', 'Daily Statistics')
 
 @section('content')
 
@@ -84,26 +85,26 @@
             }
 
 </script>
-    <div class="container">
+    <div class="container-fluid statistics">
         <div class="row clearfix">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="card history-chart py-4">
                     <div class="container-fluid header">
                         <div class="row clearfix">
                             <div class="col-xs-12 col-sm-6">
-                                <h4>Visits on a specific day</h4>
+                                <h4 class="chart-label m-4">Visits on a specific day</h4>
                             </div>
   
                         </div>
    
                     </div>
-                    <div>
+                    <div class="date-input ml-4">
                             <input type="date" id="date">
-                            <input type="button" id="update" value="update">
+                            <input class="btn btn-success" type="button" id="update" value="update">
                     </div>
                     <div class="body isResizable">
                         <div class="container-fluid chart-containter">
-                            <canvas id="chart" height="256"></canvas>
+                            <canvas id="chart" height="300"></canvas>
                         </div>
                     </div>
                 </div>

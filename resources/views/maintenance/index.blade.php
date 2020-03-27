@@ -3,7 +3,7 @@
 @section('content')
 
 @if(Auth::check())
-<div class="container maintenance-page">
+<div class="container-fluid maintenance-page">
     @include('partials.formerrors')
     <div class="row">
         <div class="col-sm-12">

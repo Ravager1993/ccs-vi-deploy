@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('header', 'Monthly Statistics')
+
 @section('content')
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
@@ -87,20 +89,20 @@ var m = month[d.getMonth()];
             g6D[2].push(d);
         }
 </script>
-    <div class="container">
+    <div class="container-fluid statistics">
         <div class="row clearfix">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="card history-chart py-4">
                     <div class="container-fluid header">
                         <div class="row clearfix">
                             <div class="col-xs-12 col-sm-6">
-                                <h4>Visits By Month</h4>
+                                <h4 class="chart-label m-4">Visits By Month</h4>
                             </div>
   
                         </div>
    
                     </div>
-                    <div>
+                    <div class="date-input ml-4">
                             <select id="month">
                                 <option value="1">January</option>
                                 <option value="2">February</option>
@@ -120,11 +122,11 @@ var m = month[d.getMonth()];
                                     <option>{{$x}}</option>
                                 @endfor
                             </select>
-                            <input type="button" id="update" value="update">
+                            <input class="btn btn-success" type="button" id="update" value="update">
                     </div>
                     <div class="body isResizable">
                         <div class="container-fluid chart-containter">
-                            <canvas id="chart" height="256"></canvas>
+                            <canvas id="chart" height="300"></canvas>
                         </div>
                     </div>
                 </div>

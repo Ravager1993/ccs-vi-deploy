@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('header', 'Weekly Statistics')
 
 @section('content')
 <script>
@@ -102,21 +103,21 @@ dayOfWeek[6] = "Sat";
             g6D[3].push(day);
         }
 </script>
-    <div class="container">
+    <div class="container-fluid statistics">
         <div class="row clearfix">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="card history-chart py-4">
                     <div class="container-fluid header">
                         <div class="row clearfix">
                             <div class="col-xs-12 col-sm-6">
-                                <h4>Visits By Week</h4>
+                                <h4 class="chart-label m-4">Visits By Week</h4>
                             </div>
   
                         </div>
    
                     </div>
-                    <div>
-                            Month: 
+                    <div class="date-input ml-4">
+                            <span>MONTH: </span>
                             <select id="month">
                                 <option value="1">January</option>
                                 <option value="2">February</option>
@@ -131,24 +132,24 @@ dayOfWeek[6] = "Sat";
                                 <option value="11">November</option>
                                 <option value="12">December</option>
                             </select>
-                            Week: 
+                            <span>WEEK: </span>
                             <select id="week">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
                                 <option>4</option>
                             </select>
-                            Year: 
+                            <span>YEAR: </span>
                         <select id="year">
                                 @for($x=2018;$x<=date('Y');$x++)
                                     <option>{{$x}}</option>
                                 @endfor
                             </select>
-                            <input type="button" id="update" value="update">
+                            <input class="btn btn-success" type="button" id="update" value="update">
                     </div>
                     <div class="body isResizable">
                         <div class="container-fluid chart-containter">
-                            <canvas id="chart" height="256"></canvas>
+                            <canvas id="chart" height="300"></canvas>
                         </div>
                     </div>
                 </div>

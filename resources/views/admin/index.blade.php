@@ -132,7 +132,7 @@
 
 
     <div class="row clearfix mb-4">
-        <div class="col-md-4 col-lg-4 col-sm-6">
+        <div class="col-md-5 col-lg-5 col-sm-6">
             <div class="card history-chart py-4">
                 <div class="container-fluid header">
                     <div class="row clearfix">
@@ -150,51 +150,46 @@
         </div>
 
 
-        <div class="col-md-8 col-lg-8 col-sm-6">
-            <div class="container-fluid ">
-                <div class="calendar mt-xs-4 mt-sm-0" id="calendar">
-                    <div class="month">      
+        <div class="col-md-7 col-lg-7 col-sm-6">
+            {{--  CALENDAR  --}}
+            <div class="calendar mt-4 mt-sm-0" id="calendar">
+                <div class="month">
                     <ul>
-                        <li class="prev">&#10094;</li>
-                        <li class="next">&#10095;</li>
-                        <li>
-                            <p id="month">January</p>
-                            <span id="year" style="font-size:18px">2020</span>
+                        <li class="prev" onclick="prevMonth()">&#10094;</li>
+                        <li class="next" onclick="nextMonth()">&#10095;</li>
+                        <li class="month-label">
+                            <input type="hidden" value="1" id="monthID">
+                            <input type="hidden" value="2000" id="yearID">
+                            <p id="month">JANUARY</p>
+                            <span id="year">2000</span>
                         </li>
                     </ul>
                 </div>
+                <div class="date">
+                    <ul class="weekdays">
+                        <li class="mon">Mon</li>
+                        <li class="tue">Tue</li>
+                        <li class="wed">Wed</li>
+                        <li class="thu">Thu</li>
+                        <li class="fri">Fri</li>
+                        <li class="sat">Sat</li>
+                        <li class="sun">Sun</li>
+                    </ul>
+                    
+                    <ul class="days" id="days">
+                    </ul>
+                </div>
 
-                <ul class="weekdays">
-                    <li>Mo</li>
-                    <li>Tu</li>
-                    <li>We</li>
-                    <li>Th</li>
-                    <li>Fr</li>
-                    <li>Sa</li>
-                    <li>Su</li>
-                </ul>
-
-                <ul class="days" id="days">
-                </ul>
+                <div class="today">
+                    <button id="today" onclick="updateToday()">Today</button>
+                    <div class="curr-date" id="text-today">00-00-0000</div>
                 </div>
             </div>
+            <script src="{{ asset('public/js/calendar.js') }} "></script>
+            {{--  END CALENDAR  --}}
+
         </div>
     </div>
-
-    {{--  <script>
-        var day = 0;
-        function getDay() {
-            var i;
-            for(i=0; i<32; i++) {
-                
-            }
-        }
-    </script>  --}}
-
-
-
-
-
 
 
     <div class="row clearfix">
@@ -848,63 +843,6 @@ var myChart = new Chart(ctx, {
 /* 9911AA */
 /* AADD22 */
 
-
-
-
-
-
-
-
-
-
-// calendar
-//////////////
-var d = new Date();
-var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-document.getElementById('month').innerHTML = months[d.getMonth()];
-document.getElementById('year').innerHTML = d.getFullYear();
-
-
-//////////////////////////////////////////////////////////////////////////
-var numDays = lastday(d.getFullYear(), d.getMonth());
-
-var nd = new Date(d.getFullYear(), d.getMonth(), 1);
-var dayStart = nd.getDay();
-
-function lastday(y,m){
-  return  new Date(y, m +1, 0).getDate();
-}
-
-for(var i = 0; i < numDays; i++) {
-  var spc=0;
-  if(i==0) {
-    switch(dayStart) {
-      case 0: spc=6; break;
-      case 1: spc=0; break;
-      case 2: spc=1; break;
-      case 3: spc=2; break;
-      case 4: spc=3; break;
-      case 5: spc=4; break;
-      case 6: spc=5; break;
-    }
-    for(var j=0; j<spc; j++) {
-      var currnode = document.createElement("LI");
-      var subtextnode = document.createTextNode(" ");
-      currnode.appendChild(subtextnode);
-      document.getElementById("days").appendChild(currnode);
-    }
-  }
-  if(i == d.getDate()) {
-    node.classList.add('active');
-  }
-  var node = document.createElement("LI");
-  var textnode = document.createTextNode(i+1);
-  node.appendChild(textnode);
-  document.getElementById("days").appendChild(node);
-  
-  
-}
 
 var i;
 for(i=0;i<12;i++){
