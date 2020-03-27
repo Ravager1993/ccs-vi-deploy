@@ -843,6 +843,23 @@ var myChart = new Chart(ctx, {
 /* 9911AA */
 /* AADD22 */
 
+var d = new Date();
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+document.getElementById('month').innerHTML = months[d.getMonth()];
+document.getElementById('year').innerHTML = d.getFullYear();
+
+
+//////////////////////////////////////////////////////////////////////////
+var numDays = lastday(d.getFullYear(), d.getMonth());
+
+var nd = new Date(d.getFullYear(), d.getMonth(), 1);
+var dayStart = nd.getDay();
+
+function lastday(y,m){
+  return  new Date(y, m +1, 0).getDate();
+}
+
 
 var i;
 for(i=0;i<12;i++){
